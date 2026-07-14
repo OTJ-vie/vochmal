@@ -17,6 +17,8 @@ export interface ApartmentListing {
   bathrooms: number;
   area: string;
   badge?: string;
+  /** Set to false to hide this listing from the frontend without deleting it (e.g. not yet backed by real photos/pricing). */
+  active?: boolean;
 }
 
 export const apartments: ApartmentListing[] = [
@@ -39,6 +41,7 @@ export const apartments: ApartmentListing[] = [
     bathrooms: 1,
     area: "38 sqm",
     badge: "Best Value",
+    active: false,
   },
   {
     id: "apt2",
@@ -59,6 +62,7 @@ export const apartments: ApartmentListing[] = [
     bathrooms: 1,
     area: "65 sqm",
     badge: "Most Popular",
+    active: false,
   },
   {
     id: "apt3",
@@ -69,9 +73,9 @@ export const apartments: ApartmentListing[] = [
     priceRange: "₦120,000 – ₦150,000",
     priceNote: "per night (minimum 5-night stay)",
     images: [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
-      "https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=800&q=80",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80",
+      "/images/apartments/premium-2bed-living-room-1.jpg",
+      "/images/apartments/premium-2bed-living-room-2.jpg",
+      "/images/apartments/premium-2bed-kitchen-dining.jpg",
     ],
     amenities: [
       "WiFi", "Air Conditioning", "Smart TV", "Full Kitchen", "Daily Housekeeping",
@@ -104,6 +108,7 @@ export const apartments: ApartmentListing[] = [
     bathrooms: 3,
     area: "210 sqm",
     badge: "Premium",
+    active: false,
   },
 ];
 

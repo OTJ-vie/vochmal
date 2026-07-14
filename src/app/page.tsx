@@ -89,10 +89,10 @@ export default function HomePage() {
                 Nigeria&rsquo;s Diversified Enterprise of the Modern Era
               </h2>
               <p className="text-white/70 mt-5 text-base leading-relaxed">
-                Established in 2014, Vochmal Limited has grown into one of Nigeria&rsquo;s most
-                dynamic diversified companies, operating across six strategic business divisions
-                that collectively serve the construction, mining, food production, supply chain,
-                hospitality, and energy sectors.
+                Incorporated in 2017, Vochmal Limited has grown into a diversified Nigerian
+                enterprise, operating across six strategic business divisions that collectively
+                serve the construction, mining, food production, supply chain, hospitality, and
+                energy sectors.
               </p>
               <p className="text-white/70 mt-4 text-base leading-relaxed">
                 Our mission is simple: to deliver exceptional value to our clients, create

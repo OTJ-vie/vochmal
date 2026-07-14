@@ -5,54 +5,146 @@ export interface Project {
   divisionSlug: string;
   location: string;
   year: string;
-  category: "Commercial" | "Residential" | "Infrastructure" | "Industrial" | "Mining" | "Energy";
+  category: "Water Infrastructure" | "Education" | "Infrastructure" | "Industrial" | "Mining" | "Energy";
   description: string;
   image: string;
+  gallery?: string[];
   status: "Completed" | "Ongoing";
 }
 
 export const projects: Project[] = [
   {
     id: "p1",
-    title: "Eko Atlantic Commercial Tower",
+    title: "RAAMP Bridge Construction, Musidzu–Daawki",
     division: "Construction",
     divisionSlug: "construction",
-    location: "Victoria Island, Lagos",
-    year: "2023",
-    category: "Commercial",
+    location: "Kanke LGA, Plateau State",
+    year: "2025",
+    category: "Infrastructure",
     description:
-      "A 12-storey mixed-use commercial tower featuring Grade A office spaces, retail floors, and an underground car park. Delivered six weeks ahead of schedule.",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    status: "Completed",
+      "Construction of a 30-metre span reinforced concrete bridge over the Musidzu–Daawki crossing under the Rural Access and Agricultural Marketing Project (RAAMP), improving rural connectivity in Kanke LGA.",
+    image: "/images/projects/raamp-bridge-musidzu-daawki.jpg",
+    gallery: [
+      "/images/projects/gallery/raamp-bridge/bridge-site-excavation.jpg",
+      "/images/projects/gallery/raamp-bridge/bridge-foundation-mountain.jpg",
+      "/images/projects/gallery/raamp-bridge/bridge-deck-rebar-pour.jpg",
+      "/images/projects/gallery/raamp-bridge/bridge-deck-completed-side.jpg",
+    ],
+    status: "Ongoing",
   },
   {
     id: "p2",
-    title: "Kaduna Ring Road Phase II",
+    title: "Solar-Powered Boreholes — Bokkos & Barkin Ladi",
     division: "Construction",
     divisionSlug: "construction",
-    location: "Kaduna State",
-    year: "2022",
-    category: "Infrastructure",
+    location: "Bokkos & Barkin Ladi LGA, Plateau State",
+    year: "2024",
+    category: "Water Infrastructure",
     description:
-      "A 14.5 km dual carriageway with reinforced bridges, drainage systems, and street lighting infrastructure connecting key industrial zones.",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80",
+      "Drilling and installation of four solar-powered boreholes with elevated storage tanks for water supply, irrigation, and livestock across Bokkos and Barkin Ladi LGA under Plateau State's climate resilience programme.",
+    image: "/images/projects/borehole-bokkos-barkinladi.jpg",
+    gallery: [
+      "/images/projects/gallery/borehole-bokkos-barkinladi/tower-1.jpg",
+      "/images/projects/gallery/borehole-bokkos-barkinladi/tower-2.jpg",
+      "/images/projects/gallery/borehole-bokkos-barkinladi/livestock-trough-1.jpg",
+      "/images/projects/gallery/borehole-bokkos-barkinladi/livestock-trough-2.jpg",
+    ],
     status: "Completed",
   },
   {
     id: "p3",
-    title: "Greenview Estate Phase 1",
+    title: "Extension of Department of Geology, University of Jos",
     division: "Construction",
     divisionSlug: "construction",
-    location: "Lekki, Lagos",
-    year: "2023",
-    category: "Residential",
+    location: "Naraguta Campus, University of Jos, Plateau State",
+    year: "2024–2025",
+    category: "Infrastructure",
     description:
-      "A gated estate of 48 luxury terrace homes with shared amenities including a clubhouse, swimming pool, and perimeter security.",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+      "Structural extension works (Lot 6) at the Department of Geology, University of Jos, Naraguta Campus, from foundation to structural completion.",
+    image: "/images/projects/university-jos-geology-extension.jpg",
+    gallery: [
+      "/images/projects/gallery/university-jos-geology/material-delivery.jpg",
+      "/images/projects/gallery/university-jos-geology/blockwork-progress.jpg",
+      "/images/projects/gallery/university-jos-geology/roofing-in-progress.jpg",
+    ],
     status: "Completed",
   },
   {
     id: "p4",
+    title: "Solar-Powered Borehole Water Supply, Jos North",
+    division: "Construction",
+    divisionSlug: "construction",
+    location: "Jos North LGA, Plateau State",
+    year: "2024",
+    category: "Water Infrastructure",
+    description:
+      "Drilling and commissioning of solar-powered boreholes for water supply in Jos North LGA on behalf of the Plateau State Ministry of Environment.",
+    image: "/images/projects/borehole-jos-north.jpg",
+    gallery: [
+      "/images/projects/gallery/borehole-jos-north/solar-control-box.jpg",
+      "/images/projects/gallery/borehole-jos-north/water-flow-test.jpg",
+      "/images/projects/gallery/borehole-jos-north/flowing-taps.jpg",
+      "/images/projects/gallery/borehole-jos-north/community-use.jpg",
+    ],
+    status: "Completed",
+  },
+  {
+    id: "p5",
+    title: "Rainwater Harvesting Project — 2,000 Households",
+    division: "Construction",
+    divisionSlug: "construction",
+    location: "Plateau Club, Bingham University & Gura-Top, Plateau State",
+    year: "2024",
+    category: "Water Infrastructure",
+    description:
+      "Construction of rainwater harvesting storage installations serving 2,000 households across Plateau Club, Bingham University, and Gura-Top under the Community and Inclusive Green Growth Support (CIGS) initiative.",
+    image: "/images/projects/rainwater-harvesting-plateau.jpg",
+    gallery: [
+      "/images/projects/gallery/rainwater-harvesting/tank-west-of-mines.jpg",
+      "/images/projects/gallery/rainwater-harvesting/twin-tanks-ecwa-bishara.jpg",
+      "/images/projects/gallery/rainwater-harvesting/tank-plateau-riders.jpg",
+    ],
+    status: "Completed",
+  },
+  {
+    id: "p6",
+    title: "Classroom Block Construction, GJSS Mushi",
+    division: "Construction",
+    divisionSlug: "construction",
+    location: "Bokkos LGEA, Plateau State",
+    year: "2024",
+    category: "Education",
+    description:
+      "Construction of a new two-classroom block with veranda for Government Junior Secondary School, Mushi, delivered for Bokkos LGEA.",
+    image: "/images/projects/classroom-construction-gjss-mushi.jpg",
+    gallery: [
+      "/images/projects/gallery/classroom-gjss-mushi/project-signboard.jpg",
+      "/images/projects/gallery/classroom-gjss-mushi/foundation-block-delivery.jpg",
+      "/images/projects/gallery/classroom-gjss-mushi/block-walls-progress.jpg",
+      "/images/projects/gallery/classroom-gjss-mushi/roof-timber-framework.jpg",
+    ],
+    status: "Completed",
+  },
+  {
+    id: "p7",
+    title: "Classroom Renovation, LEA Gwaram",
+    division: "Construction",
+    divisionSlug: "construction",
+    location: "Wase LGA, Plateau State",
+    year: "2024",
+    category: "Education",
+    description:
+      "Full structural renovation of a two-classroom block at LEA Gwaram, delivered for the Plateau State Universal Basic Education Board, Wase LGA.",
+    image: "/images/projects/classroom-renovation-gwaram-wase.jpg",
+    gallery: [
+      "/images/projects/gallery/classroom-gwaram-wase/project-signboard.jpg",
+      "/images/projects/gallery/classroom-gwaram-wase/before-dilapidated.jpg",
+      "/images/projects/gallery/classroom-gwaram-wase/plastering-in-progress.jpg",
+    ],
+    status: "Completed",
+  },
+  {
+    id: "p8",
     title: "Nasarawa Mineral Processing Plant",
     division: "Mining",
     divisionSlug: "mining",
@@ -65,20 +157,7 @@ export const projects: Project[] = [
     status: "Ongoing",
   },
   {
-    id: "p5",
-    title: "Abuja Central Hospital Renovation",
-    division: "Construction",
-    divisionSlug: "construction",
-    location: "FCT, Abuja",
-    year: "2022",
-    category: "Commercial",
-    description:
-      "Complete structural renovation and fit-out of a 200-bed hospital including theatre suites, ICU, and administrative wings to international healthcare standards.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
-    status: "Completed",
-  },
-  {
-    id: "p6",
+    id: "p9",
     title: "Trans-Delta Pipeline Integrity Project",
     division: "Oil & Gas",
     divisionSlug: "oil-and-gas",
@@ -89,32 +168,6 @@ export const projects: Project[] = [
       "Pipeline inspection, cathodic protection renewal, and integrity assessment across 48 km of transmission pipeline in the Niger Delta region.",
     image: "https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=800&q=80",
     status: "Ongoing",
-  },
-  {
-    id: "p7",
-    title: "Warri Industrial Storage Terminal",
-    division: "Construction",
-    divisionSlug: "construction",
-    location: "Warri, Delta State",
-    year: "2023",
-    category: "Industrial",
-    description:
-      "Construction of a 15,000 sqm warehousing and logistics terminal with container handling infrastructure and a diesel storage facility.",
-    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
-    status: "Completed",
-  },
-  {
-    id: "p8",
-    title: "Federal Government Staff Housing",
-    division: "Construction",
-    divisionSlug: "construction",
-    location: "Abuja, FCT",
-    year: "2021",
-    category: "Residential",
-    description:
-      "Construction of 120 residential units across 3-bedroom and 4-bedroom configurations for the Federal Ministry of Works, including estate roads and utilities.",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-    status: "Completed",
   },
 ];
 

@@ -72,14 +72,25 @@ export default function ServiceApartmentsPage() {
           <SectionHeading
             eyebrow="Our Units"
             title="Apartment Listings"
-            subtitle="Four apartment categories designed to suit every stay duration, guest count, and budget."
+            subtitle="Available apartments designed to suit your stay duration, guest count, and budget."
             id="apartments-heading"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {apartments.map((apt) => (
-              <ApartmentCard key={apt.id} apt={apt} />
-            ))}
-          </div>
+          {(() => {
+            const activeApartments = apartments.filter((apt) => apt.active !== false);
+            return (
+              <div
+                className={
+                  activeApartments.length > 1
+                    ? "grid grid-cols-1 md:grid-cols-2 gap-8"
+                    : "grid grid-cols-1 gap-8 max-w-md mx-auto"
+                }
+              >
+                {activeApartments.map((apt) => (
+                  <ApartmentCard key={apt.id} apt={apt} />
+                ))}
+              </div>
+            );
+          })()}
         </div>
       </section>
 
@@ -108,10 +119,10 @@ export default function ServiceApartmentsPage() {
 
       {/* Virtual Tour Video */}
       <VideoModal
-        backgroundImage="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920&q=85"
-        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        backgroundImage="/images/apartments/premium-2bed-living-room-2.jpg"
+        videoUrl="/videos/premium-2bed-tour.mp4"
         title="Take a Virtual Tour"
-        subtitle="Experience the Vochmal Service Apartments from the comfort of your screen before you book."
+        subtitle="Walk through our Premium Two-Bedroom apartment from the comfort of your screen before you book."
       />
 
       {/* Location */}

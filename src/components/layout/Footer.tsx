@@ -107,24 +107,28 @@ export default function Footer() {
             <ul className="space-y-4 mb-6">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin size={15} className="shrink-0 mt-0.5 text-gold" />
-                <span>12 Corporate Drive, Victoria Island, Lagos, Nigeria</span>
+                <span>34 Somoye Osundiaro Street, Ikeja, Lagos State</span>
+              </li>
+              <li className="flex items-start gap-3 text-sm text-white/60">
+                <MapPin size={15} className="shrink-0 mt-0.5 text-gold" />
+                <span>1 D. B. Zang Way, Jos, Plateau State</span>
               </li>
               <li>
                 <a
-                  href="tel:+2348012345678"
+                  href="tel:+2348036305694"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   <Phone size={15} className="shrink-0 text-gold" />
-                  +234 801 234 5678
+                  +234 803 630 5694
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@vochmal.com"
+                  href="mailto:vochmal7@gmail.com"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   <Mail size={15} className="shrink-0 text-gold" />
-                  info@vochmal.com
+                  vochmal7@gmail.com
                 </a>
               </li>
             </ul>

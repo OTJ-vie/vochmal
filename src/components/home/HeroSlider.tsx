@@ -1,14 +1,13 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { heroSlides } from "@/data/projects";
 
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
@@ -16,11 +15,10 @@ export default function HeroSlider() {
   return (
     <section className="relative h-screen min-h-[600px] max-h-[900px]" aria-label="Featured hero slider">
       <Swiper
-        modules={[Autoplay, Navigation, Pagination, EffectFade]}
+        modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
         loop
-        navigation
         pagination={{ clickable: true }}
         className="h-full w-full"
       >

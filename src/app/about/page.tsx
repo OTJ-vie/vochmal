@@ -12,19 +12,18 @@ import { teamMembers } from "@/data/team";
 export const metadata: Metadata = {
   title: "About Vochmal Limited",
   description:
-    "Learn about Vochmal Limited — our founding story, leadership team, vision, mission, core values, and company milestones since 2014.",
+    "Learn about Vochmal Limited — our founding story, leadership team, vision, mission, core values, and company milestones since 2017.",
 };
 
 const milestones = [
-  { year: "2014", title: "Company Founded", description: "Vochmal Limited was incorporated in Lagos with an initial focus on construction and general procurement services." },
-  { year: "2016", title: "Mining Division Launch", description: "Vochmal expanded into mineral resources with the establishment of its Mining division, securing the first operating licence in Nasarawa State." },
-  { year: "2018", title: "Bakery Division Established", description: "The Bakery division was launched with a commercial production facility in Lagos, targeting both retail and institutional markets across the South-West." },
-  { year: "2019", title: "ISO 9001 Certification", description: "Vochmal Procurement Services achieved ISO 9001:2015 certification, cementing its quality management credentials for corporate and government clients." },
-  { year: "2020", title: "Service Apartments Launch", description: "The Service Apartments division opened its first portfolio of luxury furnished units in Victoria Island, Lagos, targeting the corporate and expatriate market." },
-  { year: "2021", title: "Oil & Gas Division", description: "Vochmal entered the energy sector with the registration of its Oil & Gas division, achieving DPR/NUPRC pre-qualification within the same year." },
-  { year: "2022", title: "NCDMB Compliance Achieved", description: "The Oil & Gas division achieved full Nigerian Content Development and Monitoring Board compliance, unlocking participation in major upstream contracts." },
-  { year: "2023", title: "₦18 Billion in Contracts", description: "Vochmal Construction delivered 14 projects in a single year with a combined contract value exceeding ₦18 billion, including the landmark Eko Atlantic Commercial Tower." },
-  { year: "2024", title: "Group Record Revenue", description: "Vochmal Limited reported record group revenue with all six business divisions posting positive growth, confirming the company's position as a leading diversified Nigerian enterprise." },
+  { year: "2017", title: "Company Founded", description: "Vochmal Limited was incorporated in Lagos on 5th October 2017 (RC 1442966), with an initial focus on construction and general procurement services." },
+  { year: "2019", title: "Mining Division Launch", description: "Vochmal expanded into mineral resources with the establishment of its Mining division, securing the first operating licence in Nasarawa State." },
+  { year: "2020", title: "Jos Office Opens", description: "Vochmal opened a permanent office in Jos, Plateau State, to support its growing portfolio of government infrastructure and water projects across the state." },
+  { year: "2021", title: "Bakery Division Established", description: "The Bakery division was launched with a commercial production facility in Lagos, targeting both retail and institutional markets across the South-West." },
+  { year: "2022", title: "Service Apartments Launch", description: "The Service Apartments division opened its first portfolio of furnished units in Lagos, targeting the corporate and expatriate market." },
+  { year: "2023", title: "Oil & Gas Division", description: "Vochmal entered the energy sector with the registration of its Oil & Gas division." },
+  { year: "2024", title: "Plateau State Infrastructure Delivery", description: "Vochmal Construction delivered multiple government infrastructure projects across Plateau State, including solar-powered borehole water schemes, classroom construction and renovation, and a rainwater harvesting programme serving 2,000 households." },
+  { year: "2025", title: "RAAMP Bridge & University Extension", description: "Vochmal Construction commenced the 30-metre span Musidzu–Daawki bridge under the Rural Access and Agricultural Marketing Project (RAAMP) and completed the Department of Geology extension at the University of Jos." },
 ];
 
 const certifications = [
@@ -61,24 +60,22 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 mt-6 text-gray-600 leading-relaxed">
                 <p>
-                  Vochmal Limited was founded in 2014 by Adewale Okonkwo with a single conviction:
-                  that an indigenous Nigerian company could match and exceed the standards of any
-                  international firm operating on Nigerian soil. What began as a construction and
-                  procurement business has grown into a diversified conglomerate with six business
-                  divisions, hundreds of employees, and a track record spanning billions of naira
-                  in delivered value.
+                  Vochmal Limited was incorporated on 5th October 2017 (RC 1442966), with an
+                  initial focus on construction and general procurement services. From offices in
+                  Ikeja, Lagos and Jos, Plateau State, the company has since grown into a
+                  diversified enterprise with interests spanning construction, mining, bakery,
+                  general procurement, service apartments, and oil & gas.
                 </p>
                 <p>
-                  From the construction of commercial towers in Lagos to mineral extraction in
-                  Nasarawa, from fresh-baked artisan bread distributed across three states to luxury
-                  service apartments trusted by multinationals, Vochmal has demonstrated that
-                  diversification, done right, builds resilience and creates compounding value.
+                  Our Construction division has delivered government infrastructure across Plateau
+                  State — solar-powered borehole water schemes, classroom construction and
+                  renovation for local education boards, a rainwater harvesting programme serving
+                  2,000 households, structural extension works at the University of Jos, and bridge
+                  construction under the Rural Access and Agricultural Marketing Project (RAAMP).
                 </p>
                 <p>
-                  Today, Vochmal Limited is recognised by regulators, corporate clients, and
-                  international partners as a company that delivers on its promises. We operate with
-                  transparency, professionalism, and an unwavering commitment to quality — in every
-                  division, on every project, with every client.
+                  Vochmal Limited operates with transparency, professionalism, and a commitment to
+                  quality — in every division, on every project, with every client.
                 </p>
               </div>
               <Link href="/contact" className="btn-primary mt-8 inline-flex">
@@ -98,7 +95,7 @@ export default function AboutPage() {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-6 bg-navy text-white rounded-xl p-5 shadow-xl">
-                <p className="font-display text-4xl font-bold text-gold">10+</p>
+                <p className="font-display text-4xl font-bold text-gold">8+</p>
                 <p className="text-sm text-white/70 mt-1">Years of Excellence</p>
               </div>
             </div>
@@ -120,17 +117,17 @@ export default function AboutPage() {
               {
                 icon: Eye,
                 title: "Our Vision",
-                text: "To be the most trusted and respected diversified enterprise in West Africa — an indigenous company that defines the standard for quality, integrity, and impact across every sector we serve.",
+                text: "At Vochmal Ltd., our vision is to be the most respected and trusted name in construction, renowned for excellence in craftsmanship, innovation, and sustainable practices.",
               },
               {
                 icon: Target,
                 title: "Our Mission",
-                text: "To deliver exceptional products and services across our six business divisions by investing in people, technology, and processes that consistently exceed client expectations and create long-term value.",
+                text: "At Vochmal Ltd., our mission is to deliver exceptional construction services with an unwavering commitment to quality, safety, and innovation — exceeding client expectations through our skilled workforce, technology, and sustainable practices, and building lasting relationships with our clients, employees, and communities.",
               },
               {
                 icon: Star,
                 title: "Core Values",
-                list: ["Integrity in every interaction", "Excellence without compromise", "Innovation driven by purpose", "People first — clients and team", "Accountability at every level", "Sustainable impact for Nigeria"],
+                list: ["Innovation", "Excellence", "Integrity", "Professionalism", "Teamwork", "Social responsibility"],
               },
             ].map((item) => (
               <div key={item.title} className="bg-navy rounded-2xl p-8 text-white flex flex-col">
@@ -160,8 +157,8 @@ export default function AboutPage() {
         <div className="container-custom">
           <SectionHeading
             eyebrow="Leadership"
-            title="Meet Our Executive Team"
-            subtitle="Experienced leaders with deep sector knowledge driving Vochmal's growth across six business divisions."
+            title="Our Board of Directors"
+            subtitle="The Board that provides strategic direction and governance oversight for Vochmal Limited."
             id="team-heading"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

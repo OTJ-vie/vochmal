@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import { X, MapPin, Calendar } from "lucide-react";
 import { projects } from "@/data/projects";
 
-type FilterCategory = "All" | "Commercial" | "Residential" | "Infrastructure";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+type FilterCategory = "All" | "Water Infrastructure" | "Education" | "Infrastructure";
 
 export default function ProjectGallery() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
@@ -17,7 +23,7 @@ export default function ProjectGallery() {
       ? constructionProjects
       : constructionProjects.filter((p) => p.category === activeFilter);
 
-  const filters: FilterCategory[] = ["All", "Commercial", "Residential", "Infrastructure"];
+  const filters: FilterCategory[] = ["All", "Water Infrastructure", "Education", "Infrastructure"];
 
   return (
     <div>
@@ -85,22 +91,48 @@ export default function ProjectGallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative h-64 md:h-80">
-              <Image
-                src={lightbox.image}
-                alt={lightbox.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 700px"
-              />
+              {(() => {
+                const images = [lightbox.image, ...(lightbox.gallery || [])];
+                return images.length > 1 ? (
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    className="h-full w-full"
+                  >
+                    {images.map((img, i) => (
+                      <SwiperSlide key={img + i}>
+                        <div className="relative h-64 md:h-80">
+                          <Image
+                            src={img}
+                            alt={`${lightbox.title} — image ${i + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 700px"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                ) : (
+                  <Image
+                    src={lightbox.image}
+                    alt={lightbox.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 700px"
+                  />
+                );
+              })()}
               <button
                 onClick={() => setLightbox(null)}
                 aria-label="Close project details"
-                className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
+                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-colors"
               >
                 <X size={18} />
               </button>
               <div
-                className="absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full text-white"
+                className="absolute top-3 left-3 z-10 text-xs font-semibold px-3 py-1 rounded-full text-white"
                 style={{ backgroundColor: lightbox.status === "Completed" ? "#16a34a" : "#f78405" }}
               >
                 {lightbox.status}

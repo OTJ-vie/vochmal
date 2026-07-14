@@ -18,6 +18,7 @@ export default function VideoModal({
   subtitle,
 }: VideoModalProps) {
   const [open, setOpen] = useState(false);
+  const isLocalVideo = /\.(mp4|webm|ogg)$/i.test(videoUrl);
 
   return (
     <>
@@ -76,13 +77,24 @@ export default function VideoModal({
             >
               <X size={18} />
             </button>
-            <iframe
-              src={videoUrl}
-              title={title}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {isLocalVideo ? (
+              <video
+                src={videoUrl}
+                controls
+                autoPlay
+                className="w-full h-full"
+              >
+                <track kind="captions" />
+              </video>
+            ) : (
+              <iframe
+                src={videoUrl}
+                title={title}
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
           </div>
         </div>
       )}

@@ -144,12 +144,12 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+2348012345678"
+              href="tel:+2348036305694"
               className="flex items-center gap-2 text-white/80 hover:text-gold text-sm transition-colors"
               aria-label="Call Vochmal"
             >
               <Phone size={15} />
-              <span>+234 801 234 5678</span>
+              <span>+234 803 630 5694</span>
             </a>
             <Link href="/contact" className="btn-primary text-sm py-2 px-5">
               Contact Us
@@ -220,11 +220,11 @@ export default function Navbar() {
 
         <div className="px-6 pb-8 border-t border-white/10 pt-6 space-y-3">
           <a
-            href="tel:+2348012345678"
+            href="tel:+2348036305694"
             className="flex items-center gap-2 text-white/70 hover:text-gold text-sm transition-colors"
           >
             <Phone size={16} />
-            <span>+234 801 234 5678</span>
+            <span>+234 803 630 5694</span>
           </a>
           <Link href="/contact" className="btn-primary w-full justify-center">
             Contact Us

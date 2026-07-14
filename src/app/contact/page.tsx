@@ -56,10 +56,23 @@ export default function ContactPage() {
                     <MapPin size={18} className="text-gold" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-semibold text-navy text-sm">Head Office</p>
+                    <p className="font-semibold text-navy text-sm">Lagos Office</p>
                     <p className="text-gray-500 text-sm mt-1 leading-relaxed">
-                      12 Corporate Drive, Victoria Island<br />
-                      Lagos, Nigeria
+                      34 Somoye Osundiaro Street, Ikeja<br />
+                      Lagos State, Nigeria
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 bg-offwhite rounded-xl p-5">
+                  <div className="w-10 h-10 rounded-lg bg-navy flex items-center justify-center shrink-0">
+                    <MapPin size={18} className="text-gold" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy text-sm">Jos Office</p>
+                    <p className="text-gray-500 text-sm mt-1 leading-relaxed">
+                      1 D. B. Zang Way<br />
+                      Jos, Plateau State, Nigeria
                     </p>
                   </div>
                 </div>
@@ -70,8 +83,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy text-sm">General Enquiries</p>
-                    <a href="tel:+2348012345678" className="text-gray-500 text-sm hover:text-gold transition-colors">
-                      +234 801 234 5678
+                    <a href="tel:+2348036305694" className="text-gray-500 text-sm hover:text-gold transition-colors block">
+                      +234 803 630 5694
+                    </a>
+                    <a href="tel:+2349060004730" className="text-gray-500 text-sm hover:text-gold transition-colors block">
+                      +234 906 000 4730
+                    </a>
+                    <a href="tel:+2348036726743" className="text-gray-500 text-sm hover:text-gold transition-colors block">
+                      +234 803 672 6743
                     </a>
                   </div>
                 </div>
@@ -82,8 +101,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy text-sm">Email</p>
-                    <a href="mailto:info@vochmal.com" className="text-gray-500 text-sm hover:text-gold transition-colors">
-                      info@vochmal.com
+                    <a href="mailto:vochmal7@gmail.com" className="text-gray-500 text-sm hover:text-gold transition-colors">
+                      vochmal7@gmail.com
                     </a>
                   </div>
                 </div>
@@ -130,12 +149,15 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <div className="bg-bluegrey h-80 flex items-center justify-center border-t border-gray-100" aria-label="Office location map">
-        <div className="text-center">
-          <MapPin size={32} className="text-gold mx-auto mb-3" aria-hidden="true" />
-          <p className="font-display text-lg font-bold text-navy">Victoria Island, Lagos</p>
-          <p className="text-gray-500 text-sm mt-1">12 Corporate Drive — Map embed</p>
-        </div>
+      <div className="h-80 border-t border-gray-100">
+        <iframe
+          title="Vochmal Limited — Jos Office Location"
+          src="https://www.google.com/maps?q=1+D.B.+Zang+Way,+Jos,+Plateau+State,+Nigeria&output=embed"
+          className="w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          aria-label="Map showing Vochmal Limited's Jos office at 1 D. B. Zang Way, Jos, Plateau State"
+        />
       </div>
 
       {/* Department Cards */}

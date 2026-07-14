@@ -17,6 +17,8 @@ export const divisions: Division[] = [
     id: "construction",
     name: "Construction",
     slug: "/construction",
+
+    
     shortDescription:
       "Civil engineering, building construction, and project management services delivered to the highest standards across Nigeria.",
     fullDescription:

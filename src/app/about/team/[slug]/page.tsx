@@ -119,38 +119,42 @@ export default async function TeamProfilePage({ params }: Props) {
             {/* Sidebar */}
             <aside className="space-y-6">
               {/* Qualifications */}
-              <div className="bg-offwhite rounded-2xl p-6 border border-gray-100">
-                <h3 className="font-display text-lg font-bold text-navy mb-4 flex items-center gap-2">
-                  <GraduationCap size={18} className="text-gold" aria-hidden="true" />
-                  Qualifications
-                </h3>
-                <ul className="space-y-2.5">
-                  {member.qualifications.map((q) => (
-                    <li key={q} className="flex items-start gap-2.5 text-sm text-gray-600">
-                      <CheckCircle size={14} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
-                      {q}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {member.qualifications.length > 0 && (
+                <div className="bg-offwhite rounded-2xl p-6 border border-gray-100">
+                  <h3 className="font-display text-lg font-bold text-navy mb-4 flex items-center gap-2">
+                    <GraduationCap size={18} className="text-gold" aria-hidden="true" />
+                    Qualifications
+                  </h3>
+                  <ul className="space-y-2.5">
+                    {member.qualifications.map((q) => (
+                      <li key={q} className="flex items-start gap-2.5 text-sm text-gray-600">
+                        <CheckCircle size={14} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
+                        {q}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Areas of Expertise */}
-              <div className="bg-navy rounded-2xl p-6">
-                <h3 className="font-display text-lg font-bold text-white mb-4 flex items-center gap-2">
-                  <Briefcase size={18} className="text-gold" aria-hidden="true" />
-                  Areas of Expertise
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {member.expertise.map((e) => (
-                    <span
-                      key={e}
-                      className="text-xs font-medium bg-white/10 text-white/85 px-3 py-1.5 rounded-full border border-white/10"
-                    >
-                      {e}
-                    </span>
-                  ))}
+              {member.expertise.length > 0 && (
+                <div className="bg-navy rounded-2xl p-6">
+                  <h3 className="font-display text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <Briefcase size={18} className="text-gold" aria-hidden="true" />
+                    Areas of Expertise
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {member.expertise.map((e) => (
+                      <span
+                        key={e}
+                        className="text-xs font-medium bg-white/10 text-white/85 px-3 py-1.5 rounded-full border border-white/10"
+                      >
+                        {e}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Division Link */}
               {member.division && member.divisionSlug && (

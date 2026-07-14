@@ -4,17 +4,18 @@ import { useEffect, useRef, useState } from "react";
 
 interface StatItem {
   value: number;
+  prefix?: string;
   suffix: string;
   label: string;
 }
 
 const stats: StatItem[] = [
-  { value: 10, suffix: "+", label: "Years in Business" },
-  { value: 250, suffix: "+", label: "Projects Completed" },
-  { value: 500, suffix: "+", label: "Satisfied Clients" },
+  { value: 8, suffix: "+", label: "Years in Business" },
+  { value: 13, suffix: "", label: "Active & Completed Contracts" },
+  { value: 5, prefix: "₦", suffix: "B+", label: "Naira in Contract Value" },
 ];
 
-function Counter({ value, suffix }: { value: number; suffix: string }) {
+function Counter({ value, prefix, suffix }: { value: number; prefix?: string; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -44,7 +45,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   }, [value]);
 
   return (
-    <span ref={ref} aria-label={`${value}${suffix}`}>
+    <span ref={ref} aria-label={`${prefix ?? ""}${value}${suffix}`}>
+      {prefix}
       {count}
       {suffix}
     </span>
@@ -57,7 +59,7 @@ export default function StatCounter() {
       {stats.map((stat) => (
         <div key={stat.label} className="text-center">
           <p className="font-display text-4xl md:text-5xl font-bold text-gold">
-            <Counter value={stat.value} suffix={stat.suffix} />
+            <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
           </p>
           <p className="text-white/70 text-sm mt-1 uppercase tracking-wider">{stat.label}</p>
         </div>

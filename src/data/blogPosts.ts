@@ -17,27 +17,25 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "bp1",
-    slug: "vochmal-construction-completes-eko-atlantic-tower",
-    title: "Vochmal Construction Completes Eko Atlantic Commercial Tower Six Weeks Ahead of Schedule",
+    slug: "vochmal-construction-raamp-bridge-musidzu-daawki",
+    title: "Vochmal Construction Progresses 30-Metre RAAMP Bridge in Kanke LGA, Plateau State",
     excerpt:
-      "The landmark 12-storey commercial tower at Eko Atlantic City has been handed over to the client, marking one of Vochmal Construction's most significant completions to date.",
-    content: `Vochmal Construction has officially handed over the Eko Atlantic Commercial Tower to its developer clients, completing the landmark project six weeks ahead of the contractual deadline. The 12-storey Grade A office and retail complex, situated in the prestigious Eko Atlantic development, sets a new benchmark for commercial real estate in Lagos.
+      "Construction of the Musidzu–Daawki bridge under the Rural Access and Agricultural Marketing Project is advancing in Kanke LGA, improving rural connectivity across Plateau State.",
+    content: `Vochmal Limited's Construction division is progressing work on a 30-metre span reinforced concrete bridge over the Musidzu–Daawki crossing in Kanke LGA, Plateau State, delivered under the Rural Access and Agricultural Marketing Project (RAAMP).
 
-The project, which broke ground in January 2022, saw Vochmal's team of over 450 workers execute an accelerated delivery programme without compromising on quality or safety. The tower features 11,000 square metres of leasable office space, two floors of premium retail, and a 200-vehicle underground car park.
+The project involves excavation and foundation works, reinforced concrete deck casting, and abutment construction, with the site team working through Plateau State's rainy season to keep the programme on track.
 
-"Completing this project ahead of schedule while maintaining our zero-incident safety record is a testament to the professionalism of our team and our investment in modern construction methodology," said Chukwuemeka Eze, Director of Vochmal's Construction Division.
+Once complete, the bridge will restore year-round vehicular access across the Musidzu–Daawki crossing, supporting farmers and rural communities in moving produce and goods to market — a core objective of the RAAMP programme, which is jointly supported by the Federal Government of Nigeria and the World Bank.
 
-The building incorporates smart building systems for energy management, a rainwater harvesting facility, and pre-installed fibre-optic infrastructure to attract technology and financial services tenants. It has achieved a 4-star EDGE green building certification.
-
-Vochmal Construction is currently accepting enquiries for commercial construction projects with timelines starting from Q2 2025.`,
+The RAAMP bridge adds to Vochmal Construction's growing portfolio of government infrastructure delivery across Plateau State, which includes solar-powered borehole water schemes, classroom construction and renovation, and a structural extension at the University of Jos.`,
     category: "Construction",
     categoryColor: "#0D1B40",
-    date: "March 12, 2025",
-    author: "Chukwuemeka Eze",
-    authorTitle: "Director, Construction Division",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    tags: ["Construction", "Lagos", "Commercial Real Estate", "Milestone"],
+    date: "June 2025",
+    author: "Vochmal Communications",
+    authorTitle: "Corporate Affairs",
+    readTime: "3 min read",
+    image: "/images/projects/raamp-bridge-musidzu-daawki.jpg",
+    tags: ["Construction", "Plateau State", "RAAMP", "Infrastructure"],
   },
   {
     id: "bp2",
@@ -51,14 +49,14 @@ The ₦4.2 billion facility will employ over 300 skilled workers from the local 
 
 Vochmal Mining has secured offtake agreements with three international mineral trading firms and is in discussions with the Nigerian Export Promotion Council on an expedited export certification pathway.
 
-"This facility represents our commitment to moving Nigerian mining up the value chain — from raw extraction to processed, export-ready materials," said Dr. Bello Musa, Director of Vochmal Mining.
+"This facility represents our commitment to moving Nigerian mining up the value chain — from raw extraction to processed, export-ready materials," a Vochmal Mining spokesperson said.
 
 The Nigerian Minerals and Mining Act and all relevant NUPRC and SON licensing requirements have been fully satisfied ahead of construction commencement.`,
     category: "Mining",
     categoryColor: "#92400E",
     date: "February 28, 2025",
-    author: "Dr. Bello Musa",
-    authorTitle: "Director, Mining Division",
+    author: "Vochmal Communications",
+    authorTitle: "Corporate Affairs",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
     tags: ["Mining", "Nasarawa", "Investment", "Export"],
@@ -121,7 +119,7 @@ The award builds on Vochmal Oil & Gas's track record of HSE-compliant field oper
 
 The partnerships reflect growing corporate demand for high-quality serviced accommodation that combines the privacy and amenities of a home with hotel-grade services including daily housekeeping, 24/7 concierge, and reliable power supply.
 
-"Corporate clients increasingly want more than a hotel room — they want a working environment they can sustain over weeks or months," said Funke Adebayo, Director of Vochmal Service Apartments. "Our apartments are designed precisely for that."
+"Corporate clients increasingly want more than a hotel room — they want a working environment they can sustain over weeks or months," a Vochmal Service Apartments spokesperson said. "Our apartments are designed precisely for that."
 
 Each partner company's employees will benefit from dedicated relationship management, flexible check-in and check-out arrangements, and access to Vochmal's corporate billing platform. All apartments feature high-speed internet, fully equipped kitchens, and access to the on-site gym and pool.
 
@@ -129,8 +127,8 @@ Vochmal Service Apartments is currently offering a complimentary 2-night trial t
     category: "Apartments",
     categoryColor: "#14532D",
     date: "November 5, 2024",
-    author: "Funke Adebayo",
-    authorTitle: "Director, Service Apartments",
+    author: "Vochmal Communications",
+    authorTitle: "Corporate Affairs",
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
     tags: ["Service Apartments", "Corporate", "Partnerships", "Lagos"],
@@ -165,20 +163,20 @@ Vochmal Procurement is currently accepting new vendor registrations across all s
     title: "Vochmal Limited Reports Record Revenue Growth Across All Divisions in 2024",
     excerpt:
       "Vochmal Limited's 2024 annual results reveal significant revenue growth across all six business divisions, driven by expanded capacity, new client acquisitions, and Nigeria's infrastructure investment cycle.",
-    content: `Vochmal Limited has reported record group revenue for the 2024 financial year, with all six business divisions registering positive growth. The company's Group Chief Executive Officer, Adewale Okonkwo, described 2024 as a "defining year" in the company's evolution from a regional operator to a nationally recognised diversified enterprise.
+    content: `Vochmal Limited has reported growth across its business divisions for the 2024 financial year. The Construction division delivered a series of government infrastructure projects across Plateau State, including solar-powered borehole water schemes, classroom construction and renovation, and a rainwater harvesting programme serving 2,000 households.
 
-Key highlights from the 2024 performance include the Construction division delivering 14 projects worth over ₦18 billion in contract value, the Mining division commencing its largest capital investment to date in Nasarawa State, and the Procurement division growing its active client base by 47% following its ISO 9001 certification.
+The Mining division progressed its capital investment programme in Nasarawa State, while the Procurement division continued to grow its active client base following its ISO 9001 certification.
 
-The Service Apartments division achieved an average occupancy rate of 84% across its portfolio, supported by new corporate PSA partnerships, while the Bakery division expanded its distribution footprint to 4 additional cities. The Oil & Gas division secured three new upstream support contracts and one major pipeline integrity contract.
+The Service Apartments division maintained strong occupancy across its portfolio, supported by corporate partnerships, while the Bakery division expanded its distribution footprint. The Oil & Gas division secured further upstream support contracts.
 
-"Nigeria's infrastructure and energy sectors are growing, and Vochmal is positioned to capture this growth with the depth of capability we have built across our divisions," said CEO Adewale Okonkwo. "Our 2025 strategy focuses on deepening our capacity in construction and oil & gas while scaling the bakery and service apartments businesses."
+"Nigeria's infrastructure and energy sectors are growing, and Vochmal is positioned to capture this growth with the depth of capability we have built across our divisions," a Vochmal spokesperson said. "Our strategy focuses on deepening our capacity in construction and oil & gas while scaling the bakery and service apartments businesses."
 
-A full copy of the Vochmal Limited 2024 Company Profile and Year in Review is available for download from the website.`,
+A full copy of the Vochmal Limited Company Profile is available on request.`,
     category: "Company News",
     categoryColor: "#0D1B40",
     date: "September 30, 2024",
-    author: "Adewale Okonkwo",
-    authorTitle: "Group Chief Executive Officer",
+    author: "Vochmal Communications",
+    authorTitle: "Corporate Affairs",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
     tags: ["Company News", "Annual Report", "Growth", "Leadership"],
@@ -193,7 +191,7 @@ A full copy of the Vochmal Limited 2024 Company Profile and Year in Review is av
 
 The BMS package will include automated lighting and HVAC control, energy consumption monitoring, access control integration, predictive maintenance alerts, and real-time occupancy analytics. The integration is delivered in partnership with a leading pan-African technology firm specialising in building automation.
 
-"Our commercial clients are increasingly expecting the same intelligence in their buildings that they demand from their business software," said Director Chukwuemeka Eze. "This move enables us to deliver buildings that not only meet construction quality standards but also deliver measurable operational savings over their lifecycle."
+"Our commercial clients are increasingly expecting the same intelligence in their buildings that they demand from their business software," a Vochmal Construction spokesperson said. "This move enables us to deliver buildings that not only meet construction quality standards but also deliver measurable operational savings over their lifecycle."
 
 Early adopters of the programme include a government ministry complex in Abuja and a logistics hub in Apapa, Lagos, both currently in design development. Both clients have opted for the full BMS package including solar power integration and EV charging infrastructure.
 
@@ -201,8 +199,8 @@ Vochmal Construction invites developers and property companies to schedule a tec
     category: "Construction",
     categoryColor: "#0D1B40",
     date: "August 14, 2024",
-    author: "Chukwuemeka Eze",
-    authorTitle: "Director, Construction Division",
+    author: "Vochmal Communications",
+    authorTitle: "Corporate Affairs",
     readTime: "4 min read",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     tags: ["Construction", "Smart Buildings", "Technology", "Innovation"],
@@ -217,7 +215,7 @@ Vochmal Construction invites developers and property companies to schedule a tec
 
 The programme, executed over 18 months, funded the renovation and equipping of three primary schools in Nasarawa, Kaduna, and Rivers States; the construction of eight solar-powered boreholes providing clean water to over 4,200 rural residents; and a vocational skills training initiative that graduated 180 young Nigerians in welding, plumbing, masonry, and bakery operations.
 
-"Our business success must translate into tangible improvement in the communities that host and support our operations," said CEO Adewale Okonkwo. "This ₦120 million investment is not charity — it is an expression of our belief that Vochmal's growth and community development are inseparable."
+"Our business success must translate into tangible improvement in the communities that host and support our operations," a Vochmal spokesperson said. "This investment is not charity — it is an expression of our belief that Vochmal's growth and community development are inseparable."
 
 The skills training programme, run in partnership with the National Board for Technical Education (NBTE), has already resulted in 62 graduates securing employment with Vochmal or its contractor network.
 

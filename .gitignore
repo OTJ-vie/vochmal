@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# source PDFs (company profile, tender/legal/financial documents — contain sensitive data)
+/*.pdf
+
 # vercel
 .vercel
 
