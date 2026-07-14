@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
-  Wifi, Shield, Zap, AirVent, SprayCan, Car, Waves, Dumbbell,
-  Tv, ChefHat, MapPin, ChevronDown,
+  Wifi, ShieldCheck, Zap, Headset, Dog, Camera, MapPin, ChevronDown,
 } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -14,28 +13,24 @@ import { apartments, apartmentFAQs } from "@/data/apartments";
 export const metadata: Metadata = {
   title: "Service Apartments",
   description:
-    "Luxury fully furnished service apartments in Lagos for short-stay and long-stay corporate guests. Premium amenities, 24/7 security, and dedicated concierge.",
+    "Vochmal Homes — four beautifully furnished 2-bedroom apartments in Jos, Plateau State, blending comfort and affordability in a tranquil environment.",
 };
 
 const amenities = [
-  { icon: Wifi, label: "High-Speed WiFi" },
-  { icon: Shield, label: "24/7 Security" },
-  { icon: Zap, label: "Backup Power Supply" },
-  { icon: AirVent, label: "Air Conditioning" },
-  { icon: SprayCan, label: "Daily Housekeeping" },
-  { icon: Car, label: "Covered Parking" },
-  { icon: Waves, label: "Swimming Pool" },
-  { icon: Dumbbell, label: "Fully Equipped Gym" },
-  { icon: Tv, label: "Smart TV" },
-  { icon: ChefHat, label: "Fully Equipped Kitchen" },
+  { icon: Headset, label: "On-Site Customer Service" },
+  { icon: Wifi, label: "WiFi Connection" },
+  { icon: Zap, label: "24/7 Power Supply" },
+  { icon: ShieldCheck, label: "Trained Security" },
+  { icon: Dog, label: "Guard Dogs on Night Patrol" },
+  { icon: Camera, label: "CCTV Surveillance" },
 ];
 
 export default function ServiceApartmentsPage() {
   return (
     <>
       <PageHero
-        title="Your Home Away from Home in the Heart of the City"
-        subtitle="Luxury fully furnished service apartments designed for the modern executive — comfort, security, and convenience in one address."
+        title="Comfort and Affordability in a Tranquil Setting"
+        subtitle="Vochmal Homes — four beautifully furnished 2-bedroom apartments in Jos, Plateau State."
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&q=85"
         breadcrumbs={[{ label: "Service Apartments" }]}
         overlay="heavy"
@@ -52,16 +47,15 @@ export default function ServiceApartmentsPage() {
             Executive Accommodation — Reimagined
           </h2>
           <p className="text-gray-500 mt-5 leading-relaxed">
-            Vochmal Service Apartments offers a portfolio of premium furnished apartments in Lagos
-            designed specifically for corporate travellers, expatriates, and discerning individuals
-            on extended stays. Every unit is fully serviced, professionally maintained, and equipped
+            Vochmal Homes offers four beautifully furnished 2-bedroom apartments designed
+            specifically for corporate travellers, expatriates, and discerning individuals on
+            extended stays. Every unit is fully serviced, professionally maintained, and equipped
             with everything you need to live and work comfortably — from a fully equipped kitchen and
             high-speed internet to 24/7 security and a dedicated concierge team.
           </p>
           <p className="text-gray-500 mt-4 leading-relaxed">
-            Whether you need a three-night studio for a quick business trip or a six-month corporate
-            lease for a senior executive, Vochmal Service Apartments has the unit, the service, and
-            the flexibility you need.
+            Whether you need a short stay or a longer-term corporate lease, our four identical
+            2-bedroom units give you the space, the service, and the flexibility you need.
           </p>
         </div>
       </section>
@@ -100,11 +94,11 @@ export default function ServiceApartmentsPage() {
           <SectionHeading
             eyebrow="What&rsquo;s Included"
             title="Amenities & Facilities"
-            subtitle="Every Vochmal Service Apartment comes fully equipped with the amenities modern executives expect."
+            subtitle="Every Vochmal Homes apartment comes with these amenities as standard."
             light
             id="amenities-heading"
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
             {amenities.map(({ icon: Icon, label }) => (
               <div key={label} className="bg-white/10 rounded-xl p-5 text-center border border-white/10 hover:bg-white/15 transition-colors">
                 <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-3">
@@ -122,7 +116,7 @@ export default function ServiceApartmentsPage() {
         backgroundImage="/images/apartments/premium-2bed-living-room-2.jpg"
         videoUrl="/videos/premium-2bed-tour.mp4"
         title="Take a Virtual Tour"
-        subtitle="Walk through our Premium Two-Bedroom apartment from the comfort of your screen before you book."
+        subtitle="Walk through one of our 2-bedroom apartments from the comfort of your screen before you book."
       />
 
       {/* Location */}
@@ -134,20 +128,17 @@ export default function ServiceApartmentsPage() {
                 Location
               </span>
               <h2 id="location-heading" className="font-display text-3xl font-bold text-navy leading-tight">
-                Ideally Located. Perfectly Connected.
+                A Quiet, Tranquil Setting in Jos
               </h2>
               <p className="text-gray-500 mt-4 leading-relaxed">
-                Vochmal Service Apartments is located in Victoria Island, Lagos — Nigeria&rsquo;s
-                premier commercial and diplomatic district. Our address puts you minutes from the
-                major business hubs, embassies, shopping destinations, and Lagos&rsquo;s finest
-                dining.
+                Vochmal Homes is located at Covenant Country Home, Gwot Rayfield, Jos, Plateau
+                State — just after Rayfield Resort, in a calm residential setting away from the
+                noise of the city centre.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
-                  { icon: MapPin, text: "12 Admiralty Way, Victoria Island, Lagos" },
-                  { icon: MapPin, text: "20 minutes from Murtala Muhammed International Airport" },
-                  { icon: MapPin, text: "5 minutes from Eko Atlantic City" },
-                  { icon: MapPin, text: "Walkable to Victoria Island business district" },
+                  { icon: MapPin, text: "Covenant Country Home, Gwot Rayfield, Jos, Plateau State" },
+                  { icon: MapPin, text: "Just after Rayfield Resort" },
                 ].map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-start gap-3 text-sm text-gray-600">
                     <Icon size={15} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
@@ -159,7 +150,7 @@ export default function ServiceApartmentsPage() {
             <div className="bg-bluegrey rounded-2xl h-72 flex items-center justify-center border border-gray-200">
               <div className="text-center">
                 <MapPin size={32} className="text-gold mx-auto mb-3" aria-hidden="true" />
-                <p className="font-display text-lg font-bold text-navy">Victoria Island, Lagos</p>
+                <p className="font-display text-lg font-bold text-navy">Gwot Rayfield, Jos</p>
                 <p className="text-gray-500 text-sm mt-1">Map embed placeholder</p>
               </div>
             </div>
@@ -208,8 +199,8 @@ export default function ServiceApartmentsPage() {
 
       <CTABanner
         eyebrow="Reserve Now"
-        title="Ready to Book Your Executive Stay?"
-        subtitle="Ideal for corporate travellers, long-term project teams, expatriates, and individuals who demand more than a standard hotel room."
+        title="Ready to Book Your Stay?"
+        subtitle="Comfortable, affordable, and secure — book one of our four 2-bedroom apartments today."
         buttons={[
           { label: "Book Your Stay", href: "#booking", variant: "primary", icon: "arrow" },
           { label: "Request a Site Visit", href: "/contact", variant: "secondary" },

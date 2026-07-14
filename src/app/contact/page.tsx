@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const departmentContacts = [
-  { icon: Building2, name: "Construction", email: "construction@vochmal.com", phone: "+234 801 234 5678" },
-  { icon: Mountain, name: "Mining", email: "mining@vochmal.com", phone: "+234 801 234 5679" },
-  { icon: ChefHat, name: "Bakery", email: "bakery@vochmal.com", phone: "+234 801 234 5680" },
-  { icon: Package, name: "Procurement", email: "procurement@vochmal.com", phone: "+234 801 234 5681" },
-  { icon: Hotel, name: "Service Apartments", email: "apartments@vochmal.com", phone: "+234 801 234 5682" },
-  { icon: Flame, name: "Oil & Gas", email: "oilandgas@vochmal.com", phone: "+234 801 234 5683" },
+  { icon: Building2, name: "Construction", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
+  { icon: Mountain, name: "Mining", email: "vochmal7@gmail.com", phone: "+234 813 299 5131" },
+  { icon: ChefHat, name: "Bakery", email: "vochmal7@gmail.com", phone: "+234 803 672 6743" },
+  { icon: Package, name: "Procurement", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
+  { icon: Hotel, name: "Service Apartments", email: "vochmal7@gmail.com", phone: "+234 916 221 2941" },
+  { icon: Flame, name: "Oil & Gas", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
 ];
 
 export default function ContactPage() {

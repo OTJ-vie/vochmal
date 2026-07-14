@@ -4,43 +4,34 @@ import { CheckCircle, MapPin } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/ui/CTABanner";
+import VideoModal from "@/components/ui/VideoModal";
 import BulkOrderForm from "@/components/forms/BulkOrderForm";
 import { bakeryProducts } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Bakery Division",
   description:
-    "Vochmal Bakery delivers artisan and commercial baked goods at scale. NAFDAC certified. Supplying Lagos, Abuja, Port Harcourt and beyond.",
+    "Vochmal Bakery (Vochmal Foods) — a beloved bakery in Jos, Plateau State, serving freshly baked bread, snacks and pastries, and natural fruit drinks.",
 };
 
-type TabCategory = "Breads" | "Pastries & Cakes" | "Confectionery" | "Catering Packs";
+type TabCategory = "Breads" | "Snacks & Pastries" | "Drinks & Beverages";
 
-const distributionCities = [
-  { city: "Lagos", icon: "🏙️", description: "Head office, primary production, and distribution hub" },
-  { city: "Abuja", icon: "🏛️", description: "Distribution centre — hotels, supermarkets, institutions" },
-  { city: "Port Harcourt", icon: "⚓", description: "Serving hospitality and corporate catering sector" },
-  { city: "Ibadan", icon: "🌿", description: "Retail distribution and bulk supply partnerships" },
-  { city: "Kano", icon: "🕌", description: "Northern Nigeria supply in active development" },
+const whyChooseUs = [
+  "Baked and prepared fresh every single day",
+  "A full menu — bread, snacks, and natural drinks",
+  "A trusted name for households across Jos",
+  "Retail and bulk orders welcome",
 ];
 
-const qualityCerts = [
-  "NAFDAC Registration — All baked product lines",
-  "HACCP Certification — Food Safety Management",
-  "ISO 22000 — Food Safety Management System",
-  "NAFDAC GMP Certification",
-  "Lagos State Ministry of Health Certification",
-  "SON Certification — Baked Goods Standards",
-];
-
-const categories: TabCategory[] = ["Breads", "Pastries & Cakes", "Confectionery", "Catering Packs"];
+const categories: TabCategory[] = ["Breads", "Snacks & Pastries", "Drinks & Beverages"];
 
 export default function BakeryPage() {
   return (
     <>
       <PageHero
-        title="Crafted with Passion, Delivered with Pride"
-        subtitle="Artisan quality at commercial scale — from our stone-deck ovens to your table, every day."
-        image="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1920&q=85"
+        title="Freshly Baked, Every Single Day"
+        subtitle="Jos, Plateau State's home for fresh bread, snacks and pastries, and natural fruit drinks."
+        image="/images/bakery/vochmal-bread-pack.jpg"
         breadcrumbs={[{ label: "Bakery" }]}
         overlay="heavy"
         textAlign="left"
@@ -55,31 +46,34 @@ export default function BakeryPage() {
                 Our Story
               </span>
               <h2 id="bakery-about-heading" className="font-display text-3xl md:text-4xl font-bold text-navy leading-tight">
-                Where Tradition Meets Commercial Excellence
+                A Jos Favourite for Fresh, Soft Bread
               </h2>
               <div className="mt-5 space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Vochmal Bakery was built on a belief that Nigerians deserve access to
-                  consistently excellent, safe, and affordable baked goods — whether in a corner
-                  shop in Surulere or on the breakfast buffet of a five-star hotel in Abuja.
+                  Vochmal Bakery, also known as Vochmal Foods, is a popular bakery in Jos,
+                  Plateau State, famous for producing freshly baked, soft, and delicious everyday
+                  bread — perfect for breakfast, sandwiches, and everyday meals. Alongside our
+                  bread, we bake a full range of snacks and pastries — meat pies, chicken pies,
+                  chin chin, doughnuts, and more — and prepare fresh natural drinks like zobo,
+                  kunu, and tigernut juice in-house.
                 </p>
                 <p>
-                  Our production facility in Lagos operates two full production shifts daily,
-                  combining stone-deck ovens for artisan bread with high-speed commercial lines for
-                  packaged goods. Every recipe is developed by our in-house pastry chef team using
-                  premium quality ingredients sourced from trusted local and international suppliers.
+                  You&apos;ll find us on the Bukuru Bye-pass, beside Conoil Filling Station, Jos,
+                  Plateau State, where we bake fresh every day for customers across the city.
                 </p>
                 <p>
-                  NAFDAC-registered across our full product range, HACCP-certified, and ISO
-                  22000-aligned, Vochmal Bakery supplies retail chains, hotels, hospitals, school
-                  canteens, and corporate catering operations across Nigeria.
+                  We take both bulk and retail orders, and share our daily baking updates on the
+                  Vochmal Foods Facebook page.
+                </p>
+                <p className="text-sm text-gray-500">
+                  NAFDAC No: A8-113252L (Bread)
                 </p>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden aspect-square">
               <Image
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=85"
-                alt="Vochmal Bakery artisan production"
+                src="/images/bakery/vochmal-products-hero.jpg"
+                alt="Vochmal Foods products — bread, zobo, and chin-chin"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -95,7 +89,7 @@ export default function BakeryPage() {
           <SectionHeading
             eyebrow="Our Products"
             title="Product Catalogue"
-            subtitle="Browse our full range of baked goods across four product categories — available for retail purchase and bulk institutional supply."
+            subtitle="Fresh bread baked daily — available for retail purchase and bulk orders."
             id="products-heading"
           />
 
@@ -145,48 +139,58 @@ export default function BakeryPage() {
               </div>
             );
           })}
+
+          <p className="text-center text-gray-500 text-sm">
+            Coca-Cola, Fanta, Sprite, and other soft drinks are also available in-store.
+          </p>
         </div>
       </section>
 
-      {/* Distribution */}
-      <section className="section-padding bg-navy" aria-labelledby="distribution-heading">
+      {/* Video */}
+      <VideoModal
+        backgroundImage="/images/bakery/vochmal-slider.png"
+        videoUrl="/videos/vochmal-bakery.mp4"
+        title="See Vochmal Bakery in Action"
+        subtitle="A look at our fresh bread, zobo, and chin-chin — made daily in Jos, Plateau State."
+      />
+
+      {/* Visit Us */}
+      <section className="section-padding bg-navy" aria-labelledby="location-heading">
         <div className="container-custom">
           <SectionHeading
-            eyebrow="Our Reach"
-            title="Distribution & Supply"
-            subtitle="Baked fresh daily and distributed to key cities across Nigeria through our dedicated cold-chain logistics network."
+            eyebrow="Find Us"
+            title="Visit Our Bakery"
+            subtitle="Freshly baked bread, ready daily — come by or place an order."
             light
-            id="distribution-heading"
+            id="location-heading"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-            {distributionCities.map((loc) => (
-              <div key={loc.city} className="bg-white/10 rounded-xl p-5 text-center border border-white/10 hover:bg-white/15 transition-colors">
-                <span className="text-3xl mb-3 block" aria-hidden="true">{loc.icon}</span>
-                <p className="font-display font-bold text-white text-lg flex items-center justify-center gap-1">
-                  <MapPin size={14} className="text-gold" aria-hidden="true" />
-                  {loc.city}
-                </p>
-                <p className="text-white/60 text-xs mt-2 leading-relaxed">{loc.description}</p>
-              </div>
-            ))}
+          <div className="max-w-xl mx-auto bg-white/10 rounded-xl p-6 text-center border border-white/10">
+            <p className="font-display font-bold text-white text-lg flex items-center justify-center gap-2">
+              <MapPin size={16} className="text-gold" aria-hidden="true" />
+              Bukuru Bye-pass, beside Conoil Filling Station, Jos, Plateau State
+            </p>
+            <p className="text-white/60 text-sm mt-3 leading-relaxed">
+              Follow the Vochmal Foods Facebook page for daily baking updates, and reach out for
+              retail or bulk orders.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Quality */}
+      {/* Why Choose Us */}
       <section className="section-padding bg-white" aria-labelledby="quality-heading">
         <div className="container-custom">
           <SectionHeading
-            eyebrow="Our Standards"
-            title="Quality & Compliance"
-            subtitle="Every Vochmal Bakery product is manufactured under rigorous food safety standards and certified by Nigeria's relevant regulatory bodies."
+            eyebrow="Why Vochmal Bakery"
+            title="Fresh, Soft, Everyday Bread"
+            subtitle="Baked with care, every single day."
             id="quality-heading"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {qualityCerts.map((cert) => (
-              <div key={cert} className="flex items-center gap-3 bg-offwhite rounded-lg px-4 py-3 border border-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {whyChooseUs.map((point) => (
+              <div key={point} className="flex items-center gap-3 bg-offwhite rounded-lg px-4 py-3 border border-gray-100">
                 <CheckCircle size={16} className="text-gold shrink-0" aria-hidden="true" />
-                <span className="text-navy text-sm font-medium">{cert}</span>
+                <span className="text-navy text-sm font-medium">{point}</span>
               </div>
             ))}
           </div>
@@ -207,9 +211,9 @@ export default function BakeryPage() {
       </section>
 
       <CTABanner
-        eyebrow="Supply Agreement"
-        title="Supply Your Business with Premium Baked Goods"
-        subtitle="Hotels, supermarkets, hospitals, schools, and corporate caterers — join our growing supply network today."
+        eyebrow="Bulk Orders"
+        title="Stock Up on Fresh Bread"
+        subtitle="Shops, schools, events, and households across Jos — place a bulk order and we'll bake it fresh for you."
         buttons={[
           { label: "Place a Bulk Order", href: "#bulk-order", variant: "primary", icon: "arrow" },
           { label: "Contact Sales Team", href: "/contact", variant: "secondary" },

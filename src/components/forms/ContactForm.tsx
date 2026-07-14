@@ -26,6 +26,7 @@ const divisions = [
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -35,11 +36,21 @@ export default function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log("Contact form data:", data);
-    setLoading(false);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong sending your message. Please try again or email us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -169,6 +180,12 @@ export default function ContactForm() {
           <p role="alert" className="text-red-500 text-xs mt-1">{errors.message.message}</p>
         )}
       </div>
+
+      {submitError && (
+        <p role="alert" className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <button
         type="submit"

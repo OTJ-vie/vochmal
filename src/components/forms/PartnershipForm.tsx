@@ -37,17 +37,28 @@ const miningAreas = [
 export default function PartnershipForm({ division = "Oil & Gas" }: PartnershipFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<PartnershipFormData>();
 
   const areas = division === "Mining" ? miningAreas : oilGasAreas;
 
   const onSubmit = async (data: PartnershipFormData) => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log("Partnership form data:", data);
-    setLoading(false);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/partnership", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, division }),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong sending your enquiry. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -144,6 +155,12 @@ export default function PartnershipForm({ division = "Oil & Gas" }: PartnershipF
           {...register("message", { required: "Message is required" })}
         />
       </div>
+
+      {submitError && (
+        <p role="alert" className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70">
         {loading ? <><Loader2 size={16} className="animate-spin" aria-hidden="true" /> Submitting...</> : "Submit Enquiry"}

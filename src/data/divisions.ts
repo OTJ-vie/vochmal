@@ -16,6 +16,7 @@ export const divisions: Division[] = [
   {
     id: "construction",
     name: "Construction",
+    
     slug: "/construction",
 
     
@@ -27,8 +28,8 @@ export const divisions: Division[] = [
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=1920&q=85",
     color: "#0D1B40",
-    email: "construction@vochmal.com",
-    phone: "+234 801 234 5678",
+    email: "vochmal7@gmail.com",
+    phone: "+234 803 630 5694",
   },
   {
     id: "mining",
@@ -42,23 +43,23 @@ export const divisions: Division[] = [
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
     color: "#5C4033",
-    email: "mining@vochmal.com",
-    phone: "+234 801 234 5679",
+    email: "vochmal7@gmail.com",
+    phone: "+234 813 299 5131",
   },
   {
     id: "bakery",
     name: "Bakery",
     slug: "/bakery",
     shortDescription:
-      "Artisan and commercial baked goods crafted with premium ingredients, distributed to retailers and institutions nationwide.",
+      "A beloved Jos, Plateau State bakery known for fresh bread, snacks and pastries, and natural fruit drinks — Vochmal Foods.",
     fullDescription:
-      "Vochmal Bakery combines artisan craftsmanship with commercial-scale production to deliver consistently exceptional baked goods. From fresh breads and pastries to catering packs for large-scale events, we supply retail, hospitality, and institutional clients across Nigeria.",
+      "Vochmal Bakery (Vochmal Foods) is a well-known neighbourhood bakery on the Bukuru Bye-pass in Jos, Plateau State, famous for producing freshly baked, soft, and delicious everyday bread, snacks and pastries, and natural drinks like zobo, kunu, and tigernut juice. We supply retail customers and bulk orders alike, freshly made daily.",
     icon: "ChefHat",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
-    heroImage: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1920&q=85",
+    image: "/images/bakery/vochmal-bread-pack.jpg",
+    heroImage: "/images/bakery/vochmal-products-hero.jpg",
     color: "#92400E",
-    email: "bakery@vochmal.com",
-    phone: "+234 801 234 5680",
+    email: "vochmal7@gmail.com",
+    phone: "+234 803 672 6743",
   },
   {
     id: "procurement",
@@ -72,23 +73,23 @@ export const divisions: Division[] = [
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=85",
     color: "#1E3A5F",
-    email: "procurement@vochmal.com",
-    phone: "+234 801 234 5681",
+    email: "vochmal7@gmail.com",
+    phone: "+234 803 630 5694",
   },
   {
     id: "service-apartments",
     name: "Service Apartments",
     slug: "/service-apartments",
     shortDescription:
-      "Luxury fully furnished short-stay and long-stay apartments offering the comfort of home with the convenience of a hotel.",
+      "Vochmal Homes (@vochmal_homes) — four beautifully furnished 2-bedroom apartments in Jos, blending comfort and affordability in a tranquil environment.",
     fullDescription:
-      "Vochmal Service Apartments delivers premium short-stay and long-stay accommodation for corporate travellers, expatriates, and discerning individuals. Every unit is fully furnished, serviced, and equipped with modern amenities.",
+      "Vochmal Homes offers four tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort. Each unit comes with on-site customer service, WiFi, 24/7 power supply, trained security with guard dogs on night patrol, and CCTV surveillance, at ₦80,000 per night.",
     icon: "Hotel",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&q=85",
     color: "#14532D",
-    email: "apartments@vochmal.com",
-    phone: "+234 801 234 5682",
+    email: "vochmal7@gmail.com",
+    phone: "+234 916 221 2941",
   },
   {
     id: "oil-and-gas",
@@ -102,7 +103,7 @@ export const divisions: Division[] = [
     image: "https://images.unsplash.com/photo-1535900415432-74e69dd22e4e?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=1920&q=85",
     color: "#7C2D12",
-    email: "oilandgas@vochmal.com",
-    phone: "+234 801 234 5683",
+    email: "vochmal7@gmail.com",
+    phone: "+234 803 630 5694",
   },
 ];

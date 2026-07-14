@@ -27,15 +27,26 @@ const budgetRanges = [
 export default function RFQForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<RFQData>();
 
   const onSubmit = async (data: RFQData) => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log("RFQ data:", data);
-    setLoading(false);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/rfq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong sending your RFQ. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -152,6 +163,12 @@ export default function RFQForm() {
           {...register("message")}
         />
       </div>
+
+      {submitError && (
+        <p role="alert" className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70">
         {loading ? <><Loader2 size={16} className="animate-spin" aria-hidden="true" /> Submitting RFQ...</> : "Submit RFQ"}

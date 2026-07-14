@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle, Loader2, Upload } from "lucide-react";
 
@@ -31,17 +31,30 @@ const businessCategories = [
 export default function VendorForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string>("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<VendorFormData>();
 
   const onSubmit = async (data: VendorFormData) => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    console.log("Vendor registration data:", data);
-    setLoading(false);
-    setSubmitted(true);
-    reset();
-    setFileName("");
+    setSubmitError(null);
+    try {
+      const body = new FormData();
+      Object.entries(data).forEach(([key, value]) => body.append(key, value));
+      const file = fileInputRef.current?.files?.[0];
+      if (file) body.append("companyProfile", file);
+
+      const res = await fetch("/api/vendor", { method: "POST", body });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+      reset();
+      setFileName("");
+    } catch {
+      setSubmitError("Something went wrong sending your registration. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -182,11 +195,18 @@ export default function VendorForm() {
             type="file"
             accept=".pdf,.doc,.docx"
             className="sr-only"
+            ref={fileInputRef}
             onChange={(e) => setFileName(e.target.files?.[0]?.name || "")}
           />
         </label>
         <p className="text-gray-400 text-xs mt-1">Accepted formats: PDF, DOC, DOCX. Maximum file size: 5 MB.</p>
       </div>
+
+      {submitError && (
+        <p role="alert" className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70">
         {loading ? <><Loader2 size={16} className="animate-spin" aria-hidden="true" /> Submitting...</> : "Register as Vendor"}

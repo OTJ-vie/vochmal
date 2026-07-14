@@ -16,24 +16,36 @@ interface BookingFormData {
 }
 
 const apartmentTypes = [
-  "Standard Studio Suite",
-  "Executive One-Bedroom",
-  "Premium Two-Bedroom",
-  "Corporate Three-Bedroom Penthouse",
+  "2-Bedroom Apartment — Unit 1",
+  "2-Bedroom Apartment — Unit 2",
+  "2-Bedroom Apartment — Unit 3",
+  "2-Bedroom Apartment — Unit 4",
+  "No preference",
 ];
 
 export default function BookingForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<BookingFormData>();
 
   const onSubmit = async (data: BookingFormData) => {
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    console.log("Booking data:", data);
-    setLoading(false);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong sending your booking enquiry. Please try again or contact us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -152,6 +164,12 @@ export default function BookingForm() {
       <p className="text-gray-400 text-xs bg-bluegrey rounded-lg px-4 py-3">
         Our team will confirm availability and pricing within 24 hours of your enquiry submission.
       </p>
+
+      {submitError && (
+        <p role="alert" className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          {submitError}
+        </p>
+      )}
 
       <button type="submit" disabled={loading} className="btn-primary w-full justify-center disabled:opacity-70">
         {loading ? <><Loader2 size={16} className="animate-spin" aria-hidden="true" /> Submitting...</> : "Book My Stay"}

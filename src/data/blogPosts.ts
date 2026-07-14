@@ -64,26 +64,24 @@ The Nigerian Minerals and Mining Act and all relevant NUPRC and SON licensing re
   {
     id: "bp3",
     slug: "vochmal-bakery-nafdac-certification",
-    title: "Vochmal Bakery Achieves NAFDAC Certification and Expands to Abuja Market",
+    title: "Vochmal Bakery's Bread Achieves NAFDAC Certification",
     excerpt:
-      "Following successful NAFDAC product registration, Vochmal Bakery is expanding its distribution network to Abuja, bringing its artisan baked goods to the Federal Capital Territory.",
-    content: `Vochmal Bakery has successfully completed the NAFDAC registration process for its full range of commercial baked products, paving the way for a major distribution expansion into the Federal Capital Territory. The certification covers the company's breads, pastries, confectionery, and catering pack product lines.
+      "Vochmal Bakery's signature bread has received NAFDAC product registration, reinforcing the safety and quality behind the fresh bread baked daily in Jos, Plateau State.",
+    content: `Vochmal Bakery (Vochmal Foods) has secured NAFDAC product registration (NAFDAC No: A8-113252L) for its signature bread, reinforcing the safety and quality standards behind the soft, freshly baked loaves produced daily at the bakery's home on the Bukuru Bye-pass, Jos, Plateau State.
 
-The Abuja expansion will be anchored by a new distribution hub in Lugbe, from which deliveries will serve hotels, supermarket chains, corporate caterers, and institutional clients across the FCT. The hub will be operational by May 2025 and will create 45 new distribution and support jobs.
+The certification covers Vochmal's bread line — Special Bread, Big Loaf, and Small Bread — baked fresh every morning for retail customers and bulk orders across the city.
 
-"Abuja represents a significant growth market for premium baked goods, and our NAFDAC certification gives both retailers and end consumers complete confidence in our product safety standards," said the Bakery Division's Head of Operations.
+Alongside its bread, Vochmal Bakery produces a full range of snacks and pastries, including meat pies, chicken pies, chin chin, and doughnuts, as well as natural drinks made in-house — zobo, kunu, and tigernut juice.
 
-Vochmal Bakery's production facility in Lagos currently operates two production shifts daily, producing over 8,000 units of baked goods each day. The company is already in advanced discussions to supply two of Abuja's leading hotel chains on an exclusive basis.
-
-Retailers and distributors interested in stocking Vochmal Bakery products in the FCT are invited to contact the division directly.`,
+Customers can place retail or bulk orders directly at the bakery, or follow the Vochmal Foods Facebook page for daily baking updates.`,
     category: "Bakery",
     categoryColor: "#92400E",
     date: "January 15, 2025",
     author: "Vochmal Communications",
     authorTitle: "Corporate Affairs",
-    readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
-    tags: ["Bakery", "NAFDAC", "Abuja", "Expansion"],
+    readTime: "2 min read",
+    image: "/images/bakery/vochmal-bread-pack.jpg",
+    tags: ["Bakery", "NAFDAC", "Jos", "Plateau State"],
   },
   {
     id: "bp4",
@@ -112,26 +110,22 @@ The award builds on Vochmal Oil & Gas's track record of HSE-compliant field oper
   {
     id: "bp5",
     slug: "vochmal-service-apartments-corporate-partnerships",
-    title: "Vochmal Service Apartments Signs Corporate Partnerships with Three Multinationals",
+    title: "Vochmal Homes: Four Furnished 2-Bedroom Apartments Now Available in Jos",
     excerpt:
-      "Vochmal Service Apartments has formalised preferred accommodation agreements with three leading multinational firms operating across Nigeria, cementing its position as a top-tier corporate accommodation provider.",
-    content: `Vochmal Service Apartments has signed Preferred Supplier Agreements (PSAs) with three multinational corporations with major operations across Nigeria. The agreements guarantee a minimum of 120 accommodation nights per month and cover executive suites, premium one-bedroom, and two-bedroom apartments across the portfolio.
+      "Vochmal Homes offers four tastefully furnished 2-bedroom apartments in a tranquil setting in Jos, Plateau State, blending comfort and affordability.",
+    content: `Vochmal Homes (@vochmal_homes) offers four tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort, blending comfort and affordability in a tranquil environment.
 
-The partnerships reflect growing corporate demand for high-quality serviced accommodation that combines the privacy and amenities of a home with hotel-grade services including daily housekeeping, 24/7 concierge, and reliable power supply.
+Each unit comes fully furnished with two bedrooms and a living and dining area, and is backed by on-site customer service, WiFi, 24/7 power supply, trained security with guard dogs on night patrol, and CCTV surveillance.
 
-"Corporate clients increasingly want more than a hotel room — they want a working environment they can sustain over weeks or months," a Vochmal Service Apartments spokesperson said. "Our apartments are designed precisely for that."
-
-Each partner company's employees will benefit from dedicated relationship management, flexible check-in and check-out arrangements, and access to Vochmal's corporate billing platform. All apartments feature high-speed internet, fully equipped kitchens, and access to the on-site gym and pool.
-
-Vochmal Service Apartments is currently offering a complimentary 2-night trial to qualifying corporate clients. Contact the division to arrange a viewing and trial stay.`,
+Apartments are available at ₦80,000 per night. For availability and bookings, follow @vochmal_homes on Instagram or contact the division directly.`,
     category: "Apartments",
     categoryColor: "#14532D",
     date: "November 5, 2024",
     author: "Vochmal Communications",
     authorTitle: "Corporate Affairs",
-    readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
-    tags: ["Service Apartments", "Corporate", "Partnerships", "Lagos"],
+    readTime: "2 min read",
+    image: "/images/apartments/premium-2bed-living-room-1.jpg",
+    tags: ["Service Apartments", "Jos", "Plateau State"],
   },
   {
     id: "bp6",
@@ -167,7 +161,7 @@ Vochmal Procurement is currently accepting new vendor registrations across all s
 
 The Mining division progressed its capital investment programme in Nasarawa State, while the Procurement division continued to grow its active client base following its ISO 9001 certification.
 
-The Service Apartments division maintained strong occupancy across its portfolio, supported by corporate partnerships, while the Bakery division expanded its distribution footprint. The Oil & Gas division secured further upstream support contracts.
+The Service Apartments division, Vochmal Homes, maintained strong occupancy across its four apartments in Jos, while the Bakery division expanded its distribution footprint. The Oil & Gas division secured further upstream support contracts.
 
 "Nigeria's infrastructure and energy sectors are growing, and Vochmal is positioned to capture this growth with the depth of capability we have built across our divisions," a Vochmal spokesperson said. "Our strategy focuses on deepening our capacity in construction and oil & gas while scaling the bakery and service apartments businesses."
 
