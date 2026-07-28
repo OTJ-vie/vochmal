@@ -3,7 +3,7 @@ import {
   MapPin, Phone, Mail, Clock,
   Building2, Mountain, ChefHat, Package, Hotel, Flame,
 } from "lucide-react";
-import { LinkedinIcon, FacebookIcon, InstagramIcon, XIcon } from "@/components/ui/SocialIcons";
+import { FacebookIcon, InstagramIcon } from "@/components/ui/SocialIcons";
 import PageHero from "@/components/ui/PageHero";
 import ContactForm from "@/components/forms/ContactForm";
 
@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const departmentContacts = [
-  { icon: Building2, name: "Construction", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
+  { icon: Building2, name: "Construction", email: "vochmal7@gmail.com", phone: "+234 803 672 6743" },
   { icon: Mountain, name: "Mining", email: "vochmal7@gmail.com", phone: "+234 813 299 5131" },
-  { icon: ChefHat, name: "Bakery", email: "vochmal7@gmail.com", phone: "+234 803 672 6743" },
-  { icon: Package, name: "Procurement", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
-  { icon: Hotel, name: "Service Apartments", email: "vochmal7@gmail.com", phone: "+234 916 221 2941" },
-  { icon: Flame, name: "Oil & Gas", email: "vochmal7@gmail.com", phone: "+234 803 630 5694" },
+  { icon: ChefHat, name: "Bakery", email: "vochmal7@gmail.com", phone: "+234 805 974 5012" },
+  { icon: Package, name: "Procurement", email: "vochmal7@gmail.com", phone: "+234 803 672 6743" },
+  { icon: Hotel, name: "Service Apartments", email: "vochmal7@gmail.com", phone: "+234 907 900 0404" },
+  { icon: Flame, name: "Oil & Gas", email: "vochmal7@gmail.com", phone: "+234 703 964 2446" },
 ];
 
 export default function ContactPage() {
@@ -84,13 +84,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-navy text-sm">General Enquiries</p>
                     <a href="tel:+2348036305694" className="text-gray-500 text-sm hover:text-gold transition-colors block">
-                      +234 803 630 5694
+                      +234 803 672 6743
                     </a>
                     <a href="tel:+2349060004730" className="text-gray-500 text-sm hover:text-gold transition-colors block">
                       +234 906 000 4730
-                    </a>
-                    <a href="tel:+2348036726743" className="text-gray-500 text-sm hover:text-gold transition-colors block">
-                      +234 803 672 6743
                     </a>
                   </div>
                 </div>
@@ -126,10 +123,10 @@ export default function ContactPage() {
                   <p className="font-semibold text-white text-sm mb-4">Follow Us</p>
                   <div className="flex items-center gap-3">
                     {[
-                      { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-                      { Icon: FacebookIcon, href: "#", label: "Facebook" },
-                      { Icon: InstagramIcon, href: "#", label: "Instagram" },
-                      { Icon: XIcon, href: "#", label: "X / Twitter" },
+                      // { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+                      { Icon: FacebookIcon, href: "https://www.facebook.com/767296453140017/", label: "Facebook" },
+                      { Icon: InstagramIcon, href: "https://www.instagram.com/vochmal_homes/", label: "Instagram" },
+                      // { Icon: XIcon, href: "#", label: "X / Twitter" },
                     ].map(({ Icon, href, label }) => (
                       <a
                         key={label}

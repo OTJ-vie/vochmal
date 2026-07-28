@@ -11,8 +11,8 @@ interface StatItem {
 
 const stats: StatItem[] = [
   { value: 8, suffix: "+", label: "Years in Business" },
-  { value: 13, suffix: "", label: "Active & Completed Contracts" },
-  { value: 5, prefix: "₦", suffix: "B+", label: "Naira in Contract Value" },
+  { value: 200, suffix: "+", label: "Active & Completed Contracts" },
+  { value: 50, prefix: "₦", suffix: "B+", label: "Naira in Contract Value" },
 ];
 
 function Counter({ value, prefix, suffix }: { value: number; prefix?: string; suffix: string }) {

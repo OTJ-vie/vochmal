@@ -41,11 +41,11 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               {[
-                { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-                { Icon: FacebookIcon, href: "#", label: "Facebook" },
-                { Icon: InstagramIcon, href: "#", label: "Instagram" },
-                { Icon: XIcon, href: "#", label: "X / Twitter" },
-                { Icon: YoutubeIcon, href: "#", label: "YouTube" },
+                // { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+                { Icon: FacebookIcon, href: "https://www.facebook.com/767296453140017/", label: "Facebook" },
+                { Icon: InstagramIcon, href: "https://www.instagram.com/vochmal_homes/", label: "Instagram" },
+                // { Icon: XIcon, href: "#", label: "X / Twitter" },
+                // { Icon: YoutubeIcon, href: "#", label: "YouTube" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -115,11 +115,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+2348036305694"
+                  href="tel:++2348036726743"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   <Phone size={15} className="shrink-0 text-gold" />
-                  +234 803 630 5694
+                  +234 803 672 6743
                 </a>
               </li>
               <li>
@@ -158,7 +158,7 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} Vochmal Limited. All rights reserved. RC 1442966.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-gold transition-colors">Terms of Use</Link>
+            <Link href="/terms-of-use" className="hover:text-gold transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>

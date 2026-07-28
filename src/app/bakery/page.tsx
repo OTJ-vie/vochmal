@@ -70,12 +70,12 @@ export default function BakeryPage() {
                 </p>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden aspect-square">
+            <div className="relative aspect-[4/3]">
               <Image
-                src="/images/bakery/vochmal-products-hero.jpg"
+                src="/images/bakery/vochmal-products-illustration.png"
                 alt="Vochmal Foods products — bread, zobo, and chin-chin"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

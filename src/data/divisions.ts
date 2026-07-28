@@ -36,9 +36,9 @@ export const divisions: Division[] = [
     name: "Mining",
     slug: "/mining",
     shortDescription:
-      "Responsible mineral extraction and site operations with full regulatory compliance and investor-grade transparency.",
+      "Vochmal (Mines) Limited — extraction and processing of tin, columbite, iron, monazite, zircon, lead, zinc ore, and lithium, based in Jos, Plateau State.",
     fullDescription:
-      "Vochmal Mining operates responsible, technology-driven mineral extraction across strategic sites in Nigeria. We offer investor partnerships, export services, and environmental stewardship backed by full NUPRC and SON compliance.",
+      "Vochmal (Mines) Limited (RC 1442966) extracts and processes tin, columbite, iron, monazite, zircon, lead, zinc ore, and lithium, operating from a head office at 1 D. B. Zang Way, Jos, Plateau State, and a branch office at Mile 7, Jos. We welcome investment, joint venture, and offtake enquiries.",
     icon: "Mountain",
     image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",

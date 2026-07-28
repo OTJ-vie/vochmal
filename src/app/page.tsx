@@ -33,9 +33,9 @@ const valueProps = [
   },
   {
     icon: Globe,
-    title: "Pan-Nigeria Presence",
+    title: "Growing Nigeria Presence",
     description:
-      "Operations spanning Lagos, Abuja, Port Harcourt, Kaduna, Nasarawa, and the Niger Delta.",
+      "Operations and offices across Lagos and Jos, Plateau State, with six divisions serving clients nationwide.",
     iconColor: "text-navy",
   },
   {
@@ -173,11 +173,11 @@ export default function HomePage() {
       {/* CTA Banner */}
       <CTABanner
         eyebrow="Work With Us"
-        title="Ready to Work With Vochmal Limited?"
+        title="Ready  to Work With Vochmal Limited?"
         subtitle="Speak with our team today about your construction, procurement, mining, oil & gas, or accommodation needs. We respond within 24 hours."
         buttons={[
           { label: "Get In Touch", href: "/contact", variant: "primary", icon: "arrow" },
-          { label: "Download Company Profile", href: "#", variant: "secondary", icon: "download" },
+          // { label: "Download Company Profile", href: "#", variant: "secondary", icon: "download" },
         ]}
       />
     </>

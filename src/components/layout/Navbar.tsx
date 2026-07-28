@@ -23,8 +23,9 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
 ];
+
+const contactLink = { name: "Contact", href: "/contact" };
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,8 +42,12 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setMobileOpen(false);
-    setMegaOpen(false);
+    const resetMenuState = window.setTimeout(() => {
+      setMobileOpen(false);
+      setMegaOpen(false);
+    }, 0);
+
+    return () => window.clearTimeout(resetMenuState);
   }, [pathname]);
 
   useEffect(() => {
@@ -139,17 +144,27 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link
+              href={contactLink.href}
+              className={cn(
+                "px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-colors relative after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold after:scale-x-0 after:transition-transform",
+                isActive(contactLink.href) && "text-gold after:scale-x-100"
+              )}
+            >
+              {contactLink.name}
+            </Link>
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+2348036305694"
+              href="tel:+2348036726743"
               className="flex items-center gap-2 text-white/80 hover:text-gold text-sm transition-colors"
               aria-label="Call Vochmal"
             >
               <Phone size={15} />
-              <span>+234 803 630 5694</span>
+              <span>+234 803 672 6743</span>
             </a>
             <Link href="/contact" className="btn-primary text-sm py-2 px-5">
               Contact Us
@@ -216,15 +231,25 @@ export default function Navbar() {
               ))}
             </div>
           )}
+
+          <Link
+            href={contactLink.href}
+            className={cn(
+              "block py-3 text-lg font-medium border-b border-white/10 transition-colors",
+              isActive(contactLink.href) ? "text-gold" : "text-white/90 hover:text-gold"
+            )}
+          >
+            {contactLink.name}
+          </Link>
         </div>
 
         <div className="px-6 pb-8 border-t border-white/10 pt-6 space-y-3">
           <a
-            href="tel:+2348036305694"
+            href="tel:+2348036726743"
             className="flex items-center gap-2 text-white/70 hover:text-gold text-sm transition-colors"
           >
             <Phone size={16} />
-            <span>+234 803 630 5694</span>
+            <span>+234 803 672 6743</span>
           </a>
           <Link href="/contact" className="btn-primary w-full justify-center">
             Contact Us

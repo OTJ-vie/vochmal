@@ -20,6 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vochmal.com"),
   title: {
     default: "Vochmal Limited — Diversified Excellence Across Nigeria",
     template: "%s | Vochmal Limited",
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
     "general procurement Nigeria",
     "bakery Nigeria",
   ],
+  alternates: {
+    canonical: "https://vochmal.com",
+  },
   openGraph: {
     type: "website",
     locale: "en_NG",
@@ -57,6 +61,9 @@ export const metadata: Metadata = {
     title: "Vochmal Limited — Diversified Excellence Across Nigeria",
     description:
       "A leading Nigerian conglomerate with six business divisions: construction, mining, bakery, procurement, service apartments, and oil & gas.",
+  },
+  other: {
+    "theme-color": "#0f172a",
   },
   robots: {
     index: true,

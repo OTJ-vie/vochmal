@@ -17,7 +17,9 @@ export default function HeroSlider() {
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
-        autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        speed={1000}
+        fadeEffect={{ crossFade: true }}
+        autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
         loop
         pagination={{ clickable: true }}
         className="h-full w-full"
@@ -33,13 +35,13 @@ export default function HeroSlider() {
               sizes="100vw"
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-navy/55" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-navy/20" />
 
             {/* Slide Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container-custom">
-                <div className="max-w-2xl">
+                <div className="max-w-4xl mx-auto text-center">
                   <span className="inline-block h-0.5 w-12 bg-gold mb-6" aria-hidden="true" />
                   <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight text-shadow-sm">
                     {slide.headline}
@@ -47,7 +49,7 @@ export default function HeroSlider() {
                   <p className="mt-5 text-white/80 text-lg md:text-xl leading-relaxed">
                     {slide.tagline}
                   </p>
-                  <div className="mt-8">
+                  <div className="mt-8 flex justify-center">
                     <Link href={slide.cta.href} className="btn-primary text-base">
                       {slide.cta.label}
                       <ArrowRight size={18} />

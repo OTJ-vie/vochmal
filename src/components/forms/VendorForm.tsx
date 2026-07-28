@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle, Loader2, Upload } from "lucide-react";
 
@@ -36,6 +36,10 @@ export default function VendorForm() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<VendorFormData>();
 
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    void handleSubmit(onSubmit)(event);
+  };
+
   const onSubmit = async (data: VendorFormData) => {
     setLoading(true);
     setSubmitError(null);
@@ -69,7 +73,7 @@ export default function VendorForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+    <form onSubmit={handleFormSubmit} noValidate className="space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor="vCompanyName" className="block text-sm font-semibold text-navy mb-1.5">
@@ -180,7 +184,7 @@ export default function VendorForm() {
 
       <div>
         <label htmlFor="vProfile" className="block text-sm font-semibold text-navy mb-1.5">
-          Upload Company Profile
+          Upload Company Profile (Optional)
         </label>
         <label
           htmlFor="vProfile"
@@ -188,7 +192,7 @@ export default function VendorForm() {
         >
           <Upload size={18} className="text-gold shrink-0" aria-hidden="true" />
           <span className="text-sm text-gray-500">
-            {fileName || "PDF, DOC, DOCX — Max 5 MB"}
+            {fileName || "PDF, DOC, DOCX — Max 10 MB"}
           </span>
           <input
             id="vProfile"
@@ -199,7 +203,7 @@ export default function VendorForm() {
             onChange={(e) => setFileName(e.target.files?.[0]?.name || "")}
           />
         </label>
-        <p className="text-gray-400 text-xs mt-1">Accepted formats: PDF, DOC, DOCX. Maximum file size: 5 MB.</p>
+        <p className="text-gray-400 text-xs mt-1">Accepted formats: PDF, DOC, DOCX. Maximum file size: 10 MB.</p>
       </div>
 
       {submitError && (

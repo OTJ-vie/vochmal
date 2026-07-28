@@ -22,7 +22,7 @@ export default function PageHero({
   image,
   breadcrumbs,
   overlay = "medium",
-  textAlign = "center",
+  textAlign = "left",
 }: PageHeroProps) {
   const overlayClass = {
     light: "bg-navy/40",
@@ -47,7 +47,7 @@ export default function PageHero({
 
       <div className={`relative container-custom pb-14 w-full ${textAlign === "center" ? "text-center" : "text-left"}`}>
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-white/60 text-sm mb-4 justify-center">
+          <nav aria-label="Breadcrumb" className={`flex items-center gap-1.5 text-white/60 text-sm mb-4 ${textAlign === "center" ? "justify-center" : "justify-start"}`}>
             <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             {breadcrumbs.map((crumb, i) => (
               <span key={i} className="flex items-center gap-1.5">
@@ -65,7 +65,7 @@ export default function PageHero({
           {title}
         </h1>
         {subtitle && (
-          <p className="mt-4 text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className={`mt-4 text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed ${textAlign === "center" ? "mx-auto" : ""}`}>
             {subtitle}
           </p>
         )}

@@ -20,7 +20,7 @@ const categories = [
   { name: "Apartments", count: blogPosts.filter((p) => p.category === "Apartments").length },
   { name: "Oil & Gas", count: blogPosts.filter((p) => p.category === "Oil & Gas").length },
   { name: "Company News", count: blogPosts.filter((p) => p.category === "Company News").length },
-];
+].filter((cat) => cat.name === "All" || cat.count > 0);
 
 const recentPosts = blogPosts.slice(0, 4);
 

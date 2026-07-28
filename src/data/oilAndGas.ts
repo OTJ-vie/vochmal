@@ -108,7 +108,7 @@ export const oilGasProjects: OilGasProject[] = [
     title: "Trans-Delta Pipeline Integrity Project",
     location: "Rivers State, Nigeria",
     scope: "Inline inspection, cathodic protection renewal, and integrity management over 48 km of gas transmission pipeline.",
-    image: "https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80",
     year: "2024–2025",
   },
   {
@@ -116,7 +116,7 @@ export const oilGasProjects: OilGasProject[] = [
     title: "Upstream Wellhead Maintenance Programme",
     location: "Bayelsa State, Nigeria",
     scope: "Planned maintenance and emergency repair of 22 wellhead assemblies across three onshore oil fields.",
-    image: "https://images.unsplash.com/photo-1535900415432-74e69dd22e4e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
     year: "2023",
   },
   {
@@ -132,7 +132,7 @@ export const oilGasProjects: OilGasProject[] = [
     title: "Refinery Turnaround Support — Warri",
     location: "Warri, Delta State",
     scope: "Provision of 140 field technicians, scaffolding, and equipment for a planned turnaround maintenance programme at a mid-scale refinery.",
-    image: "https://images.unsplash.com/photo-1611270629569-8b357cb88da9?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80",
     year: "2023",
   },
   {

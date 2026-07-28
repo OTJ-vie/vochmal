@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   Building2, Landmark, Home, Road, ClipboardList, Paintbrush,
-  HardHat, Wrench, Clock, Shield, CheckCircle, ArrowRight,
+  HardHat, Wrench, Clock, Shield, CheckCircle,
 } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";

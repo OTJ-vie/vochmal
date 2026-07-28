@@ -1,69 +1,57 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckCircle, TrendingUp, Leaf, FileCheck, Truck, Pickaxe } from "lucide-react";
+import { CheckCircle, TrendingUp, Leaf, FileCheck, Truck, Pickaxe, MapPin } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/ui/CTABanner";
 import PartnershipForm from "@/components/forms/PartnershipForm";
+import VideoGallery from "@/components/ui/VideoGallery";
 
 export const metadata: Metadata = {
   title: "Mining Division",
   description:
-    "Vochmal Mining delivers responsible mineral extraction, site development, and export services across Nigeria with full NUPRC and SON compliance.",
+    "Vochmal (Mines) Limited extracts tin, columbite, iron, monazite, zircon, lead, zinc ore, and lithium from operations based in Jos, Plateau State.",
 };
+
+const minerals = ["Tin", "Columbite", "Iron", "Monazite", "Zircon", "Lead", "Zinc Ore", "Lithium"];
 
 const capabilities = [
   {
     icon: Pickaxe,
     title: "Mineral Extraction",
-    description: "Systematic extraction of tin, columbite, lithium, and industrial minerals using modern, mechanised techniques across licensed concessions.",
+    description: "Extraction and processing of tin, columbite, iron, monazite, zircon, lead, zinc ore, and lithium.",
   },
   {
     icon: FileCheck,
     title: "Compliance & Licensing",
-    description: "Full NUPRC mineral title acquisition, SON registration, Environmental Impact Assessment compliance, and ongoing regulatory engagement.",
+    description: "Registered Nigerian mining company (RC 1442966) committed to mineral title, SON, and environmental compliance requirements.",
   },
   {
     icon: Leaf,
     title: "Environmental Management",
-    description: "ISO 14001-aligned environmental management systems, land rehabilitation programmes, and zero-discharge wastewater treatment.",
+    description: "Responsible handling of extraction sites with attention to environmental impact and site rehabilitation.",
   },
   {
     icon: Truck,
     title: "Export Services",
-    description: "End-to-end export logistics including processing, certification, NEPC registration, and freight forwarding to international buyers.",
+    description: "Processing and logistics support for mineral supply to buyers and processors.",
   },
   {
     icon: TrendingUp,
     title: "Site Development",
-    description: "Full site development from exploration and geotechnical investigation through to infrastructure construction and operational commissioning.",
+    description: "Site development from exploration through to operational extraction and processing.",
   },
   {
     icon: CheckCircle,
     title: "Equipment Operations",
-    description: "Operation of excavators, bulldozers, crushers, screeners, and mineral washing plants with certified operators and preventive maintenance programmes.",
+    description: "On-site processing and handling equipment operated by an experienced team.",
   },
 ];
 
-const investmentHighlights = [
-  "Proven mineral deposits with independent geological reports available under NDA",
-  "NUPRC-licensed concessions in Nasarawa, Kaduna, and Plateau States",
-  "ISO 14001-compliant environmental management framework",
-  "Established offtake channels to international buyers in Europe and Asia",
-  "On-site processing capability reducing export cost and increasing margin",
-  "Experienced management team with 18+ years in Nigerian mining operations",
-  "NEPC-registered for mineral export with validated customs compliance history",
-  "Community Development Agreements in place with host communities",
-];
-
-const licenses = [
-  "NUPRC Mineral Title — Nasarawa State (Tin / Columbite)",
-  "NUPRC Mineral Title — Kaduna State (Lithium / Feldspar)",
-  "SON Registration — Mineral Processing",
-  "ISO 14001:2015 — Environmental Management",
-  "NESREA Compliance Certificate",
-  "NEPC Export Registration Certificate",
-  "Community Development Agreement — Nasarawa Operational Area",
+const whyPartner = [
+  "Registered Nigerian mining company — RC 1442966",
+  "Diverse mineral portfolio: tin, columbite, iron, monazite, zircon, lead, zinc ore, and lithium",
+  "Two operational offices in Jos, Plateau State",
+  "Open to investment, joint venture, and offtake discussions",
 ];
 
 export default function MiningPage() {
@@ -71,7 +59,7 @@ export default function MiningPage() {
     <>
       <PageHero
         title="Responsible Mining. Exceptional Results."
-        subtitle="Technology-driven mineral extraction with full regulatory compliance and investor-grade transparency."
+        subtitle="Vochmal (Mines) Limited — mineral extraction and processing based in Jos, Plateau State."
         image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85"
         breadcrumbs={[{ label: "Mining" }]}
         overlay="heavy"
@@ -89,23 +77,18 @@ export default function MiningPage() {
           </h2>
           <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-left">
             <p>
-              Vochmal Mining operates strategic mineral extraction and processing activities across
-              licensed concessions in Nasarawa, Kaduna, and Plateau States — three of Nigeria&rsquo;s
-              most mineral-rich states. Our portfolio includes tin and columbite extraction in
-              Nasarawa, lithium and feldspar exploration in Kaduna, and industrial mineral operations
-              in Plateau State.
+              Vochmal (Mines) Limited (RC 1442966) extracts and processes tin, columbite, iron,
+              monazite, zircon, lead, zinc ore, and lithium, operating from our head office at
+              1 D. B. Zang Way, Jos, Plateau State, with a branch office at Mile 7, Jos.
             </p>
             <p>
-              We are committed to the responsible development of Nigeria&rsquo;s mineral resources.
-              Our operations are governed by an ISO 14001-certified environmental management system,
-              with land rehabilitation, community engagement, and zero-discharge wastewater treatment
-              built into every operating site. We believe that responsible mining and commercial
-              returns are not mutually exclusive — they are inseparable.
+              We are committed to the responsible development of Nigeria&rsquo;s mineral resources,
+              with care for the communities and environments around our operations. We believe that
+              responsible mining and commercial returns are not mutually exclusive.
             </p>
             <p>
-              For investors and joint venture partners, Vochmal Mining offers transparent access to
-              verified geological data, audited operational records, and a management team with a
-              proven track record of compliant, profitable mineral extraction.
+              We welcome enquiries from investors, joint venture partners, and buyers interested in
+              our mineral portfolio.
             </p>
           </div>
         </div>
@@ -134,30 +117,45 @@ export default function MiningPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Operations Video Gallery */}
+      <section className="section-padding bg-offwhite" aria-labelledby="operations-video-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="See It For Yourself"
+            title="Our Operations"
+            subtitle="A look at mineral processing, sorting, and storage at Vochmal Mines."
+            id="operations-video-heading"
+          />
+          <VideoGallery
+            items={[
+              { thumbnail: "/images/mining/vochmines-1-thumb.jpg", videoUrl: "/videos/vochmines-1.mp4", title: "Storage & Bagging" },
+              { thumbnail: "/images/mining/vochmines-2-thumb.jpg", videoUrl: "/videos/vochmines-2.mp4", title: "Manual Sorting" },
+              { thumbnail: "/images/mining/vochmines-3-thumb.jpg", videoUrl: "/videos/vochmines-3.mp4", title: "Ore Processing" },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Locations */}
       <section className="section-padding bg-navy" aria-labelledby="operations-map-heading">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Our Footprint"
-            title="Operational Areas"
-            subtitle="Vochmal Mining holds active concessions and exploration licences across three Nigerian states."
+            title="Our Offices"
+            subtitle="Vochmal (Mines) Limited operates from two locations in Jos, Plateau State."
             light
             id="operations-map-heading"
           />
-          <div className="bg-navy-light rounded-2xl overflow-hidden border border-white/10 h-80 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle size={28} className="text-gold" aria-hidden="true" />
-              </div>
-              <p className="text-white font-display text-xl font-bold">Active Operations Map</p>
-              <p className="text-white/60 text-sm mt-2">Nasarawa · Kaduna · Plateau</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            {["Nasarawa State — Tin & Columbite", "Kaduna State — Lithium & Feldspar", "Plateau State — Industrial Minerals"].map((loc) => (
-              <div key={loc} className="bg-white/10 rounded-xl px-5 py-4 text-center border border-white/10">
-                <CheckCircle size={18} className="text-gold mx-auto mb-2" aria-hidden="true" />
-                <p className="text-white text-sm font-medium">{loc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { label: "Head Office", text: "1 D. B. Zang Way, Jos, Plateau State" },
+              { label: "Branch Office", text: "No. 2 Anguwan Kare, NEPA, Mile 7, opposite NMDC Quarters, Jos, Plateau State" },
+            ].map((office) => (
+              <div key={office.label} className="bg-white/10 rounded-xl px-6 py-5 border border-white/10">
+                <p className="text-gold text-xs font-semibold uppercase tracking-wider mb-2 flex items-center gap-2">
+                  <MapPin size={14} aria-hidden="true" /> {office.label}
+                </p>
+                <p className="text-white text-sm">{office.text}</p>
               </div>
             ))}
           </div>
@@ -176,12 +174,11 @@ export default function MiningPage() {
                 Invest in Vochmal Mining
               </h2>
               <p className="text-gray-500 mt-4 leading-relaxed">
-                We offer structured investment and joint venture opportunities in proven Nigerian
-                mineral concessions. Speak with our mining investment team to receive our
-                confidential investor brief.
+                We&rsquo;re open to investment, joint venture, and offtake discussions. Speak with
+                our team to learn more about our mineral portfolio and operations.
               </p>
               <ul className="mt-6 space-y-3">
-                {investmentHighlights.map((h) => (
+                {whyPartner.map((h) => (
                   <li key={h} className="flex items-start gap-3 text-sm text-gray-600">
                     <CheckCircle size={15} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
                     {h}
@@ -196,20 +193,20 @@ export default function MiningPage() {
         </div>
       </section>
 
-      {/* Compliance */}
-      <section className="section-padding bg-bluegrey" aria-labelledby="compliance-heading">
+      {/* Minerals */}
+      <section className="section-padding bg-bluegrey" aria-labelledby="minerals-heading">
         <div className="container-custom">
           <SectionHeading
-            eyebrow="Regulatory Standing"
-            title="Compliance & Licensing"
-            subtitle="Vochmal Mining holds all required licences and certifications for mineral extraction, processing, and export operations in Nigeria."
-            id="compliance-heading"
+            eyebrow="Our Portfolio"
+            title="Minerals We Work With"
+            subtitle="Vochmal (Mines) Limited extracts and processes the following minerals."
+            id="minerals-heading"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {licenses.map((l) => (
-              <div key={l} className="flex items-center gap-3 bg-white rounded-lg px-4 py-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {minerals.map((m) => (
+              <div key={m} className="flex items-center gap-3 bg-white rounded-lg px-4 py-3">
                 <CheckCircle size={16} className="text-gold shrink-0" aria-hidden="true" />
-                <span className="text-navy text-sm font-medium">{l}</span>
+                <span className="text-navy text-sm font-medium">{m}</span>
               </div>
             ))}
           </div>
@@ -219,7 +216,7 @@ export default function MiningPage() {
       <CTABanner
         eyebrow="Get Involved"
         title="Explore Partnership Opportunities"
-        subtitle="Talk to our mining investment team about concession partnerships, joint ventures, and offtake agreements."
+        subtitle="Talk to our team about joint ventures, offtake agreements, and investment opportunities."
         buttons={[
           { label: "Submit Partnership Enquiry", href: "#partnership", variant: "primary", icon: "arrow" },
           { label: "Contact Our Team", href: "/contact", variant: "secondary" },

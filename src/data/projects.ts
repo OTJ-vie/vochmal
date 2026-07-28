@@ -143,32 +143,6 @@ export const projects: Project[] = [
     ],
     status: "Completed",
   },
-  {
-    id: "p8",
-    title: "Nasarawa Mineral Processing Plant",
-    division: "Mining",
-    divisionSlug: "mining",
-    location: "Nasarawa State",
-    year: "2024",
-    category: "Mining",
-    description:
-      "Full-cycle mineral processing facility for tin and columbite extraction with ISO 14001-compliant environmental controls and export logistics.",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
-    status: "Ongoing",
-  },
-  {
-    id: "p9",
-    title: "Trans-Delta Pipeline Integrity Project",
-    division: "Oil & Gas",
-    divisionSlug: "oil-and-gas",
-    location: "Rivers State",
-    year: "2024",
-    category: "Energy",
-    description:
-      "Pipeline inspection, cathodic protection renewal, and integrity assessment across 48 km of transmission pipeline in the Niger Delta region.",
-    image: "https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=800&q=80",
-    status: "Ongoing",
-  },
 ];
 
 export const heroSlides = [
@@ -182,7 +156,7 @@ export const heroSlides = [
   {
     id: "s2",
     headline: "Responsible Mining, Exceptional Returns",
-    tagline: "Technology-driven mineral extraction with full regulatory compliance.",
+    tagline: "Mineral extraction and processing based in Jos, Plateau State.",
     cta: { label: "Explore Mining", href: "/mining" },
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
   },
@@ -203,7 +177,7 @@ export const heroSlides = [
   {
     id: "s5",
     headline: "Your Home Away from Home",
-    tagline: "Luxury service apartments for the modern executive — Lagos and beyond.",
+    tagline: "Four beautifully furnished 2-bedroom apartments in Jos, Plateau State.",
     cta: { label: "Explore Apartments", href: "/service-apartments" },
     image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&q=85",
   },

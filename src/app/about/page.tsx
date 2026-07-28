@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const milestones = [
   { year: "2017", title: "Company Founded", description: "Vochmal Limited was incorporated in Lagos on 5th October 2017 (RC 1442966), with an initial focus on construction and general procurement services." },
-  { year: "2019", title: "Mining Division Launch", description: "Vochmal expanded into mineral resources with the establishment of its Mining division, securing the first operating licence in Nasarawa State." },
+  { year: "2019", title: "Mining Division Launch", description: "Vochmal expanded into mineral resources with the establishment of Vochmal (Mines) Limited, based in Jos, Plateau State." },
   { year: "2020", title: "Jos Office Opens", description: "Vochmal opened a permanent office in Jos, Plateau State, to support its growing portfolio of government infrastructure and water projects across the state." },
   { year: "2021", title: "Bakery Division Established", description: "The Bakery division was launched in Jos, Plateau State, bringing freshly baked, soft everyday bread to households and retailers across the city." },
   { year: "2022", title: "Service Apartments Launch", description: "The Service Apartments division, Vochmal Homes, opened its first portfolio of furnished 2-bedroom apartments in Jos, Plateau State." },

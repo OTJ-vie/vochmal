@@ -21,10 +21,28 @@ export interface ApartmentListing {
   active?: boolean;
 }
 
-const premiumTwoBedImages = [
+const unitOneImages = [
   "/images/apartments/premium-2bed-living-room-1.jpg",
   "/images/apartments/premium-2bed-living-room-2.jpg",
   "/images/apartments/premium-2bed-kitchen-dining.jpg",
+];
+
+const unitTwoImages = [
+  "/images/apartments/premium-2bed-living-room-2.jpg",
+  "/images/apartments/premium-2bed-kitchen-dining.jpg",
+  "/images/apartments/premium-2bed-living-room-1.jpg",
+];
+
+const unitThreeImages = [
+  "/images/apartments/premium-2bed-kitchen-dining.jpg",
+  "/images/apartments/premium-2bed-living-room-1.jpg",
+  "/images/apartments/premium-2bed-living-room-2.jpg",
+];
+
+const unitFourImages = [
+  "/images/apartments/premium-2bed-living-room-1.jpg",
+  "/images/apartments/premium-2bed-kitchen-dining.jpg",
+  "/images/apartments/premium-2bed-living-room-2.jpg",
 ];
 
 const premiumTwoBedAmenities = [
@@ -42,7 +60,7 @@ export const apartments: ApartmentListing[] = [
     description: premiumTwoBedDescription,
     priceRange: "₦80,000",
     priceNote: "per night",
-    images: premiumTwoBedImages,
+    images: unitOneImages,
     amenities: premiumTwoBedAmenities,
     maxGuests: 4,
     bedrooms: 2,
@@ -56,7 +74,7 @@ export const apartments: ApartmentListing[] = [
     description: premiumTwoBedDescription,
     priceRange: "₦80,000",
     priceNote: "per night",
-    images: premiumTwoBedImages,
+    images: unitTwoImages,
     amenities: premiumTwoBedAmenities,
     maxGuests: 4,
     bedrooms: 2,
@@ -70,7 +88,7 @@ export const apartments: ApartmentListing[] = [
     description: premiumTwoBedDescription,
     priceRange: "₦80,000",
     priceNote: "per night",
-    images: premiumTwoBedImages,
+    images: unitThreeImages,
     amenities: premiumTwoBedAmenities,
     maxGuests: 4,
     bedrooms: 2,
@@ -84,7 +102,7 @@ export const apartments: ApartmentListing[] = [
     description: premiumTwoBedDescription,
     priceRange: "₦80,000",
     priceNote: "per night",
-    images: premiumTwoBedImages,
+    images: unitFourImages,
     amenities: premiumTwoBedAmenities,
     maxGuests: 4,
     bedrooms: 2,
