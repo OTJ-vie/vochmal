@@ -53,7 +53,7 @@ export default function BakeryPage() {
                   Vochmal Bakery, also known as Vochmal Foods, is a popular bakery in Jos,
                   Plateau State, famous for producing freshly baked, soft, and delicious everyday
                   bread — perfect for breakfast, sandwiches, and everyday meals. Alongside our
-                  bread, we bake a full range of snacks and pastries — meat pies, chicken pies,
+                  bread, we bake a full range of snacks and pastries — buns, meat pies, chicken pies,
                   chin chin, doughnuts, and more — and prepare fresh natural drinks like zobo,
                   kunu, and tigernut juice in-house.
                 </p>

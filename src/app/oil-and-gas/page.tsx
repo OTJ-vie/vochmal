@@ -19,7 +19,7 @@ const whyVochmal = [
   {
     icon: Users,
     title: "Industry-Certified Personnel",
-    description: "Our teams hold IWCF, OPITO, NEBOSH, and NUPRC certifications, ensuring technical competence on every assignment.",
+    description: "Our teams hold HSE and other professional certifications ensuring technical competence on every assignment.",
   },
   {
     icon: Shield,
@@ -39,14 +39,21 @@ const whyVochmal = [
 ];
 
 const certifications = [
-  "DPR/NUPRC Pre-Qualification Certificate",
-  "NCDMB Nigerian Content Compliance Certificate",
-  "ISO 9001:2015 — Quality Management",
-  "ISO 14001:2015 — Environmental Management",
-  "OHSAS 18001 — Occupational Health & Safety",
-  "NEBOSH Certified — Site Safety Officers",
-  "IWCF Well Control Certification",
-  "OPITO BOSIET Certification",
+  "Fire Safety Certification - Plateau State Fire Service",
+  "Calibration Certificate & Report - JAYAB Global Concept Nigeria Ltd",
+  "Leak Test Certificate - GABBY Petro-tech International Limited",
+  "NMDPRA/ROM/PL/ATC/23/108068 - Nigerian Midstream & Downstream Petroleum Regulatory Authority",
+  "Air Pressure Test Certificate - JAYAB Global Concept Nigeria Ltd",
+  "BN137488/2025 - Petroleum Storage and Sales License - Federal Republic of Nigeria Industry Act 2021",
+  "Certificate of Clearance - JAYAB Global Concept Nigeria Ltd",
+  // "DPR/NUPRC Pre-Qualification Certificate",
+  // "NCDMB Nigerian Content Compliance Certificate",
+  // "ISO 9001:2015 — Quality Management",
+  // "ISO 14001:2015 — Environmental Management",
+  // "OHSAS 18001 — Occupational Health & Safety",
+  // "NEBOSH Certified — Site Safety Officers",
+  // "IWCF Well Control Certification",
+  // "OPITO BOSIET Certification",
 ];
 
 const hseStats = [
@@ -61,7 +68,7 @@ export default function OilAndGasPage() {
       <PageHero
         title="Powering Nigeria's Energy Future with Expertise and Integrity"
         subtitle="End-to-end oil & gas services from upstream exploration to downstream distribution — delivered with NCDMB compliance and HSE excellence."
-        image="https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=1920&q=85"
+        image="/images/oil-and-gas/downstream-and-midstream.jpg"
         breadcrumbs={[{ label: "Oil & Gas" }]}
         overlay="heavy"
         textAlign="left"
@@ -141,7 +148,7 @@ export default function OilAndGasPage() {
           <SectionHeading
             eyebrow="Our Credentials"
             title="Certifications & Regulatory Compliance"
-            subtitle="Vochmal Oil & Gas holds all required industry certifications, safety accreditations, and NUPRC registrations."
+            subtitle="Vochmal Oil & Gas holds all required industry certifications, safety accreditations, and NMDPRA registrations."
             id="og-certs-heading"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -190,8 +197,8 @@ export default function OilAndGasPage() {
 
       {/* Video */}
       <VideoModal
-        backgroundImage="https://images.unsplash.com/photo-1535900415432-74e69dd22e4e?w=1920&q=85"
-        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        backgroundImage="/images/oil-and-gas/oilandgas-backgroundImage.jpg"
+        videoUrl="#"
         title="Vochmal Oil & Gas — Field Operations"
         subtitle="See our teams in action across upstream, pipeline, and downstream operations in Nigeria."
       />

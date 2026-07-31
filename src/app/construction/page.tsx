@@ -99,7 +99,7 @@ export default function ConstructionPage() {
       <PageHero
         title="Building the Future, One Project at a Time"
         subtitle="Civil engineering excellence, commercial construction, and infrastructure delivery across Nigeria."
-        image="https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=1920&q=85"
+        image="/images/constructions/construction-hero.jpg"
         breadcrumbs={[{ label: "Construction" }]}
         overlay="heavy"
         textAlign="left"

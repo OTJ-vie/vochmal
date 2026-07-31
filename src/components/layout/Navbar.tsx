@@ -21,6 +21,7 @@ const divisionLinks = [
 
 const navLinks = [
   { name: "Home", href: "/" },
+  // { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
 ];

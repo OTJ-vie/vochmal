@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CheckCircle, TrendingUp, Leaf, FileCheck, Truck, Pickaxe, MapPin } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -54,13 +55,34 @@ const whyPartner = [
   "Open to investment, joint venture, and offtake discussions",
 ];
 
+const certifications = [
+  "NEPC Certified - Nigeria Export Promotion Council",
+  "Mineral Processor Permit - Ministry of Mines and Steel Development, Plateau State",
+  "License to possess or purchase minerals - Ministry of Solid Minerals Development, Nigeria Minerals and Mining Act",
+  "PMBC/1044 - Ministry of Solid Minerals Development",
+];
+
+// const miningGalleryImages = [
+//   { src: "/images/mining/vochmining-1.jpeg", alt: "Mining operations and mineral handling at Vochmal Mines" },
+//   { src: "/images/mining/vochmining-2.jpeg", alt: "Ore stockpile and site logistics in mining operations" },
+//   { src: "/images/mining/vochmining-3.jpeg", alt: "Field activity and mineral processing environment" },
+//   { src: "/images/mining/vochmining-4.jpeg", alt: "Mineral loading and handling equipment on site" },
+//   { src: "/images/mining/vochmining-5.jpeg", alt: "Operational mining site with personnel and equipment" },
+//   { src: "/images/mining/vochmining-6.jpeg", alt: "Site inspection and processing activities" },
+//   { src: "/images/mining/vochmining-7.jpeg", alt: "Mining materials and processing setup" },
+//   { src: "/images/mining/vochmining-8.jpeg", alt: "Mineral processing and storage workflow" },
+//   { src: "/images/mining/vochmining-9.jpeg", alt: "Mining operations in a well-organized processing area" },
+//   { src: "/images/mining/vochmining-10.jpeg", alt: "Industrial mining operations and logistics" },
+//   { src: "/images/mining/vochmining-11.jpeg", alt: "Mining site environment and materials handling" },
+// ];
+
 export default function MiningPage() {
   return (
     <>
       <PageHero
         title="Responsible Mining. Exceptional Results."
         subtitle="Vochmal (Mines) Limited — mineral extraction and processing based in Jos, Plateau State."
-        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85"
+        image="/images/mining/mining-hero.jpeg"
         breadcrumbs={[{ label: "Mining" }]}
         overlay="heavy"
         textAlign="left"
@@ -94,8 +116,45 @@ export default function MiningPage() {
         </div>
       </section>
 
+      {/* Mining Gallery */}
+      {/* <section className="section-padding bg-offwhite" aria-labelledby="mining-gallery-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Gallery"
+            title="Mining Operations in Focus"
+            subtitle="A curated look at our operational environment, mineral handling, and processing activities."
+            id="mining-gallery-heading"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            {miningGalleryImages.map((image, index) => (
+              <div
+                key={image.src}
+                className={`group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${index === 0 ? "sm:col-span-2 sm:row-span-2" : index === 1 ? "sm:col-span-2 xl:col-span-1" : ""}`}
+              >
+                <div className="relative h-64 sm:h-72 xl:h-80 overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                {index === 0 && (
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <p className="text-gold text-xs font-semibold uppercase tracking-wider">Vochmal Mines</p>
+                    <p className="text-white text-sm mt-1">Operational view of our mining and processing environment</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
       {/* Capabilities */}
-      <section className="section-padding bg-offwhite" aria-labelledby="capabilities-heading">
+      <section className="section-padding bg-white" aria-labelledby="capabilities-heading">
         <div className="container-custom">
           <SectionHeading
             eyebrow="What We Do"
@@ -131,6 +190,7 @@ export default function MiningPage() {
               { thumbnail: "/images/mining/vochmines-1-thumb.jpg", videoUrl: "/videos/vochmines-1.mp4", title: "Storage & Bagging" },
               { thumbnail: "/images/mining/vochmines-2-thumb.jpg", videoUrl: "/videos/vochmines-2.mp4", title: "Manual Sorting" },
               { thumbnail: "/images/mining/vochmines-3-thumb.jpg", videoUrl: "/videos/vochmines-3.mp4", title: "Ore Processing" },
+              {thumbnail: "/images/mining/vochmines-4-thumb.png", videoUrl: "/videos/vochmines-4.mp4", title: "Mineral Bagging" },
             ]}
           />
         </div>
@@ -210,6 +270,26 @@ export default function MiningPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="section-padding bg-offwhite" aria-labelledby="certifications-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Our Credentials"
+            title="Certifications & Compliance"
+            subtitle="Vochmal (Mines) Limited is fully compliant with Nigerian mining regulations and environmental standards."
+            id="certifications-heading"
+          />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+            {certifications.map((c) => (
+              <li key={c} className="flex items-center bg-white rounded-lg px-4 py-3 text-sm text-gray-600">
+                <CheckCircle size={15} className="text-gold shrink-0 mt-0.5" aria-hidden="true" />
+                {c}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

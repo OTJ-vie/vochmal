@@ -12,29 +12,38 @@ export const bakeryProducts: BakeryProduct[] = [
   // Breads
   {
     id: "br1",
-    name: "Special Bread",
+    name: "White Bread | A8-113252L",
     category: "Breads",
-    description: "Our signature soft, fluffy loaf — baked fresh daily and perfect for breakfast, sandwiches, and everyday meals.",
+    description: "Our white signature soft, fluffy loaf — baked fresh daily and perfect for breakfast, sandwiches, and everyday meals.",
     availability: "Both",
-    image: "/images/bakery/vochmal-bread-pack.jpg",
+    image: "/images/bakery/white-bread.jpg",
     highlight: "Bestseller",
   },
   {
     id: "br2",
-    name: "Big Loaf",
+    name: "Coconut Bread | A8-113251L",
     category: "Breads",
-    description: "An extra-large loaf, ideal for bigger households and gatherings.",
+    description: "Soft, fluffy loaf with a hint of coconut flavour — a sweet and satisfying everyday bread.",
     availability: "Both",
     image: "/images/bakery/vochmal-bread-pack.jpg",
   },
   {
     id: "br3",
-    name: "Small Bread",
+    name: "Burger Bread | A8-113250L",
     category: "Breads",
-    description: "A single-serve size, fresh and soft — great for a quick breakfast on the go.",
+    description: "A soft, freshly baked bread perfect for making juicy burgers.",
+    availability: "Retail",
+    image: "/images/bakery/Burger-bread.jpg",
+  },
+  {
+    id: "br4",
+    name: "Flat Bread | A8-113249L",
+    category: "Breads",
+    description: "A thin, flat bread — perfect for wraps, sandwiches, and everyday meals.",
     availability: "Retail",
     image: "/images/bakery/vochmal-bread-pack.jpg",
   },
+
   // Snacks & Pastries
   {
     id: "sp1",
@@ -63,7 +72,7 @@ export const bakeryProducts: BakeryProduct[] = [
   },
   {
     id: "sp4",
-    name: "Buns",
+    name: "Buns | A8-106621L",
     category: "Snacks & Pastries",
     description: "Soft, lightly sweet fried buns — a classic everyday snack.",
     availability: "Retail",
@@ -150,6 +159,6 @@ export const bakeryProducts: BakeryProduct[] = [
     category: "Drinks & Beverages",
     description: "Naturally sweet, creamy tigernut juice, made fresh — available in big and small sizes.",
     availability: "Retail",
-    image: "https://images.unsplash.com/photo-1558113583-d75f23fcb8a9?w=400&q=80",
+    image: "/images/bakery/vochmal-tigernut.jpg",
   },
 ];

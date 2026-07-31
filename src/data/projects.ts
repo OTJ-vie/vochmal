@@ -151,14 +151,14 @@ export const heroSlides = [
     headline: "Engineering Excellence Across Nigeria",
     tagline: "From high-rise towers to critical infrastructure — we build with precision and pride.",
     cta: { label: "Explore Construction", href: "/construction" },
-    image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=1920&q=85",
+    image: "/images/constructions/construction-hero.jpg",
   },
   {
     id: "s2",
     headline: "Responsible Mining, Exceptional Returns",
     tagline: "Mineral extraction and processing based in Jos, Plateau State.",
     cta: { label: "Explore Mining", href: "/mining" },
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85",
+    image: "/images/mining/mining-hero.jpeg",
   },
   {
     id: "s3",
@@ -186,6 +186,6 @@ export const heroSlides = [
     headline: "Powering Nigeria's Energy Future",
     tagline: "End-to-end oil & gas services with NCDMB compliance and HSE excellence.",
     cta: { label: "Explore Oil & Gas", href: "/oil-and-gas" },
-    image: "https://images.unsplash.com/photo-1569402928485-6b3576e3e87c?w=1920&q=85",
+    image: "/images/oil-and-gas/oilandgas-backgroundImage.jpg",
   },
 ];

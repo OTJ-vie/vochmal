@@ -5,6 +5,7 @@ import { LinkedinIcon, FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "@
 
 const quickLinks = [
   { name: "Home", href: "/" },
+  { name: "Gallery", href: "/gallery" },
   { name: "About Us", href: "/about" },
   { name: "News & Insights", href: "/blog" },
   { name: "Contact Us", href: "/contact" },
