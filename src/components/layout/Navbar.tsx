@@ -23,9 +23,8 @@ const navLinks = [
   { name: "Home", href: "/" },
   // { name: "Gallery", href: "/gallery" },
   { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
 ];
-
+const blogLink =    { name: "Blog", href: "/blog" };
 const contactLink = { name: "Contact", href: "/contact" };
 
 export default function Navbar() {
@@ -145,6 +144,16 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+             <Link
+              href={blogLink.href}
+              className={cn(
+                "px-4 py-2 text-sm font-medium text-white/90 hover:text-gold transition-colors relative after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:bg-gold after:scale-x-0 after:transition-transform",
+                isActive(blogLink.href) && "text-gold after:scale-x-100"
+              )}
+            >
+              {blogLink.name}
+            </Link>
 
             <Link
               href={contactLink.href}
