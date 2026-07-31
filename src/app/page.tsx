@@ -159,7 +159,7 @@ export default function HomePage() {
       {/* Video Section */}
       <VideoModal
         backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
-        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        videoUrl="#"
         title="See Vochmal in Action"
         subtitle="Watch how our teams across construction, mining, oil & gas, and bakery divisions deliver excellence every single day across Nigeria."
       />

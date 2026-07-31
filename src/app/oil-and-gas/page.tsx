@@ -40,12 +40,12 @@ const whyVochmal = [
 
 const certifications = [
   "Fire Safety Certification - Plateau State Fire Service",
-  "Calibration Certificate & Report - JAYAB Global Concept Nigeria Ltd",
-  "Leak Test Certificate - GABBY Petro-tech International Limited",
+  "Calibration Certificate & Report",
+  "Leak Test Certificate",
   "NMDPRA/ROM/PL/ATC/23/108068 - Nigerian Midstream & Downstream Petroleum Regulatory Authority",
-  "Air Pressure Test Certificate - JAYAB Global Concept Nigeria Ltd",
+  "Air Pressure Test Certificate",
   "BN137488/2025 - Petroleum Storage and Sales License - Federal Republic of Nigeria Industry Act 2021",
-  "Certificate of Clearance - JAYAB Global Concept Nigeria Ltd",
+  "Certificate of Clearance",
   // "DPR/NUPRC Pre-Qualification Certificate",
   // "NCDMB Nigerian Content Compliance Certificate",
   // "ISO 9001:2015 — Quality Management",
