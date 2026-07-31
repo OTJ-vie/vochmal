@@ -81,9 +81,9 @@ export const divisions: Division[] = [
     name: "Service Apartments",
     slug: "/service-apartments",
     shortDescription:
-      "Vochmal Homes (@vochmal_homes) — four beautifully furnished 2-bedroom apartments in Jos, blending comfort and affordability in a tranquil environment.",
+      "Vochmal Homes (@vochmal_homes) — Beautifully furnished 2-bedroom apartments in Jos, blending comfort and affordability in a tranquil environment.",
     fullDescription:
-      "Vochmal Homes offers four tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort. Each unit comes with on-site customer service, WiFi, 24/7 power supply, trained security with guard dogs on night patrol, and CCTV surveillance, at ₦80,000 per night.",
+      "Vochmal Homes offers tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort. Each unit comes with on-site customer service, WiFi, 24/7 power supply, trained security with guard dogs on night patrol, and CCTV surveillance, at ₦80,000 per night.",
     icon: "Hotel",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
     heroImage: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&q=85",

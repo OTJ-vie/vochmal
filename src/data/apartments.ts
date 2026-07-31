@@ -50,7 +50,7 @@ const premiumTwoBedAmenities = [
 ];
 
 const premiumTwoBedDescription =
-  "One of four beautifully furnished 2-bedroom apartments at Vochmal Homes (@vochmal_homes), blending comfort and affordability in a tranquil environment. Each unit offers two bedrooms, a living and dining area, and a fully furnished interior.";
+  "One of our beautifully furnished 2-bedroom apartments at Vochmal Homes (@vochmal_homes), blending comfort and affordability in a tranquil environment. Each unit offers two bedrooms, a living and dining area, and a fully furnished interior.";
 
 export const apartments: ApartmentListing[] = [
   {
@@ -125,7 +125,7 @@ export const apartmentFAQs = [
   {
     question: "How many apartments are available?",
     answer:
-      "We have four tastefully furnished 2-bedroom apartments. Contact us to check availability for your dates.",
+      "We have tastefully furnished 2-bedroom apartments. Contact us to check availability for your dates.",
   },
   {
     question: "How do I get updates or make an enquiry?",

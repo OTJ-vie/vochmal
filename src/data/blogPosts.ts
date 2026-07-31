@@ -62,10 +62,10 @@ Customers can place retail or bulk orders directly at the bakery, or follow the 
   {
     id: "bp5",
     slug: "vochmal-service-apartments-corporate-partnerships",
-    title: "Vochmal Homes: Four Furnished 2-Bedroom Apartments Now Available in Jos",
+    title: "Vochmal Homes: Furnished 2-Bedroom Apartments Now Available in Jos",
     excerpt:
-      "Vochmal Homes offers four tastefully furnished 2-bedroom apartments in a tranquil setting in Jos, Plateau State, blending comfort and affordability.",
-    content: `Vochmal Homes (@vochmal_homes) offers four tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort, blending comfort and affordability in a tranquil environment.
+      "Vochmal Homes offers tastefully furnished 2-bedroom apartments in a tranquil setting in Jos, Plateau State, blending comfort and affordability.",
+    content: `Vochmal Homes (@vochmal_homes) offers tastefully furnished 2-bedroom apartments at Covenant Country Home, Gwot Rayfield, Jos, Plateau State — just after Rayfield Resort, blending comfort and affordability in a tranquil environment.
 
 Each unit comes fully furnished with two bedrooms and a living and dining area, and is backed by on-site customer service, WiFi, 24/7 power supply, trained security with guard dogs on night patrol, and CCTV surveillance.
 

@@ -13,7 +13,7 @@ import { apartments, apartmentFAQs } from "@/data/apartments";
 export const metadata: Metadata = {
   title: "Service Apartments",
   description:
-    "Vochmal Homes — four beautifully furnished 2-bedroom apartments in Jos, Plateau State, blending comfort and affordability in a tranquil environment.",
+    "Vochmal Homes — beautifully furnished 2-bedroom apartments in Jos, Plateau State, blending comfort and affordability in a tranquil environment.",
 };
 
 const amenities = [
@@ -30,7 +30,7 @@ export default function ServiceApartmentsPage() {
     <>
       <PageHero
         title="Comfort and Affordability in a Tranquil Setting"
-        subtitle="Vochmal Homes — four beautifully furnished 2-bedroom apartments in Jos, Plateau State."
+        subtitle="Vochmal Homes — beautifully furnished 2-bedroom apartments in Jos, Plateau State."
         image="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&q=85"
         breadcrumbs={[{ label: "Service Apartments" }]}
         overlay="heavy"
@@ -47,14 +47,14 @@ export default function ServiceApartmentsPage() {
             Executive Accommodation — Reimagined
           </h2>
           <p className="text-gray-500 mt-5 leading-relaxed">
-            Vochmal Homes offers four beautifully furnished 2-bedroom apartments designed
+            Vochmal Homes offers beautifully furnished 2-bedroom apartments designed
             specifically for corporate travellers, expatriates, and discerning individuals on
             extended stays. Every unit is fully serviced, professionally maintained, and equipped
             with everything you need to live and work comfortably — from a fully equipped kitchen and
             high-speed internet to 24/7 security and a dedicated concierge team.
           </p>
           <p className="text-gray-500 mt-4 leading-relaxed">
-            Whether you need a short stay or a longer-term corporate lease, our four identical
+            Whether you need a short stay or a longer-term corporate lease, our identical
             2-bedroom units give you the space, the service, and the flexibility you need.
           </p>
         </div>
@@ -200,7 +200,7 @@ export default function ServiceApartmentsPage() {
       <CTABanner
         eyebrow="Reserve Now"
         title="Ready to Book Your Stay?"
-        subtitle="Comfortable, affordable, and secure — book one of our four 2-bedroom apartments today."
+        subtitle="Comfortable, affordable, and secure — book one of our 2-bedroom apartments today."
         buttons={[
           { label: "Book Your Stay", href: "#booking", variant: "primary", icon: "arrow" },
           { label: "Request a Site Visit", href: "/contact", variant: "secondary" },
