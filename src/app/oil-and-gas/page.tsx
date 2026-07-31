@@ -196,12 +196,12 @@ export default function OilAndGasPage() {
       </section>
 
       {/* Video */}
-      <VideoModal
+      {/* <VideoModal
         backgroundImage="/images/oil-and-gas/oilandgas-backgroundImage.jpg"
         videoUrl="?"
         title="Vochmal Oil & Gas — Field Operations"
         subtitle="See our teams in action across upstream, pipeline, and downstream operations in Nigeria."
-      />
+      /> */}
 
       {/* HSE Commitment */}
       <section className="section-padding bg-navy" aria-labelledby="hse-heading">
