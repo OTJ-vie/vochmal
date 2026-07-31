@@ -56,7 +56,7 @@ Customers can place retail or bulk orders directly at the bakery, or follow the 
     author: "Vochmal Communications",
     authorTitle: "Corporate Affairs",
     readTime: "2 min read",
-    image: "/images/bakery/vochmal-bread-pack.jpg",
+    image: "/images/bakery/burgers-bread.jpg",
     tags: ["Bakery", "NAFDAC", "Jos", "Plateau State"],
   },
   {

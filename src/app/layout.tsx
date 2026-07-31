@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://vochmal.com",
   },
+  icons: {
+    icon: [{ rel: "icon", url: "/favicon.ico", type: "image/x-icon" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_NG",
