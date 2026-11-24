@@ -71,7 +71,7 @@ export default function AboutPage() {
                   State — solar-powered borehole water schemes, classroom construction and
                   renovation for local education boards, a rainwater harvesting programme serving
                   2,000 households, structural extension works at the University of Jos, and bridge
-                  construction under the Rural Access and Agricultural Marketing Project (RAAMP).
+                  construction under the Rural Access and Agricultural Marketing Project (RAAMP). Notable clients include ACREASAL for commercial complexes and AGILE for oil & gas pipeline inspections.
                 </p>
                 <p>
                   Vochmal Limited operates with transparency, professionalism, and a commitment to
@@ -273,3 +273,4 @@ export default function AboutPage() {
     </>
   );
 }
+

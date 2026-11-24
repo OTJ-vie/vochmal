@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CheckCircle, Shield, Users, BarChart3, Globe } from "lucide-react";
+import { CheckCircle, Shield, Users, BarChart3, Globe, Truck } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/ui/CTABanner";
 import OilGasServices from "@/components/oil-and-gas/OilGasServices";
 import PartnershipForm from "@/components/forms/PartnershipForm";
-import VideoModal from "@/components/ui/VideoModal";
+import ClientCard from "@/components/clients/ClientCard";
+import { clients } from "@/data/clients";
 import { oilGasProjects } from "@/data/oilAndGas";
 
 export const metadata: Metadata = {
@@ -142,6 +143,51 @@ export default function OilAndGasPage() {
         </div>
       </section>
 
+      {/* Conoil Dealership */}
+      <section className="section-padding bg-offwhite" aria-labelledby="conoil-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Partner Profile"
+            title="Conoil Dealership"
+            subtitle="Vochmal is a major marketer and independent marketer of petroleum in the downstream oil/gas sector, operating as an authorized dealer with Conoil."
+            id="conoil-heading"
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <div className="lg:col-span-1">
+              <span className="inline-block text-gold text-xs font-semibold uppercase tracking-widest mb-4 px-3 py-1 rounded-full bg-gold/10">
+                Authorized Dealer
+              </span>
+              <h3 className="font-display text-2xl font-bold text-navy">Major Downstream Marketer</h3>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                Vochmal Oil &amp; Gas operates as an independent marketer of petroleum products in the downstream sector, with authorized Conoil distribution rights. Our product range includes PMS (Premium Motor Spirit), AGO (Automotive Gas Oil), and DPK (Dual Purpose Kerosene), serving residential, commercial, and industrial customers across Plateau State and beyond.
+              </p>
+            </div>
+            <div className="lg:col-span-2 bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-5">
+                <Truck size={28} className="text-gold" />
+              </div>
+              <h4 className="font-display font-bold text-navy mb-2">Conoil Branded Trucks</h4>
+              <p className="text-gray-500 text-sm mb-5">
+                Our fleet of Conoil-branded trucks ensures reliable product distribution and logistics support across the region.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {["vochmal-truck1.jpg", "vochmal-truck2.jpg", "vochmal-truck3.jpg", "vochmal-truck4.jpg"].map((img, i) => (
+                  <div key={img} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
+                    <Image
+                      src={`/images/oil-and-gas/${img}`}
+                      alt={`Vochmal Conoil branded truck ${i + 1}`}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform hover:scale-105 duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Certifications */}
       <section className="section-padding bg-white" aria-labelledby="og-certs-heading">
         <div className="container-custom">
@@ -179,8 +225,8 @@ export default function OilAndGasPage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-5">
@@ -191,6 +237,25 @@ export default function OilAndGasPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="section-padding bg-white" aria-labelledby="og-clients-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Our Clients"
+            title="Oil & Gas Clients"
+            subtitle="Clients we have supported through oil and gas services. Select a client to view their completed and ongoing projects."
+            id="og-clients-heading"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clients
+              .filter((c) => c.divisionSlug === "oil-and-gas")
+              .map((client) => (
+                <ClientCard key={client.id} client={client} />
+              ))}
           </div>
         </div>
       </section>
@@ -210,7 +275,7 @@ export default function OilAndGasPage() {
             HSE Commitment
           </span>
           <h2 id="hse-heading" className="font-display text-3xl md:text-4xl font-bold text-white max-w-2xl mx-auto leading-tight">
-            Health, Safety & Environment is Non-Negotiable
+            Health, Safety &amp; Environment is Non-Negotiable
           </h2>
           <p className="text-white/70 mt-5 max-w-2xl mx-auto leading-relaxed">
             At Vochmal Oil & Gas, safety is not a compliance checkbox — it is a core operating

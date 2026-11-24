@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import {
   Building2, Landmark, Home, Road, ClipboardList, Paintbrush,
   HardHat, Wrench, Clock, Shield, CheckCircle,
@@ -7,6 +7,8 @@ import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/ui/CTABanner";
 import ProjectGallery from "@/components/construction/ProjectGallery";
+import ClientCard from "@/components/clients/ClientCard";
+import { clients } from "@/data/clients";
 
 export const metadata: Metadata = {
   title: "Construction Division",
@@ -85,11 +87,11 @@ const processSteps = [
 ];
 
 const certifications = [
-  "COREN — Council for the Regulation of Engineering in Nigeria",
-  "CORBON — Construction Regulation Board of Nigeria",
+  "COREN â€” Council for the Regulation of Engineering in Nigeria",
+  "CORBON â€” Construction Regulation Board of Nigeria",
   "ISO 9001:2015 Quality Management",
-  "NSE — Nigerian Society of Engineers Member",
-  "NIOB — Nigerian Institute of Building Member",
+  "NSE â€” Nigerian Society of Engineers Member",
+  "NIOB â€” Nigerian Institute of Building Member",
   "PENCOM Compliance Certificate",
 ];
 
@@ -165,7 +167,23 @@ export default function ConstructionPage() {
         </div>
       </section>
 
-      {/* Process */}
+            {/* Clients */}
+      <section className="section-padding bg-white" aria-labelledby="clients-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Our Clients"
+            title="Clients We Have Worked With"
+            subtitle="Selected clients across our construction, oil and gas, and procurement work. Select a client to view their completed and ongoing projects."
+            id="clients-heading"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clients.map((client) => (
+              <ClientCard key={client.id} client={client} />
+            ))}
+          </div>
+        </div>
+      </section>
+{/* Process */}
       <section className="section-padding bg-white" aria-labelledby="process-heading">
         <div className="container-custom">
           <SectionHeading

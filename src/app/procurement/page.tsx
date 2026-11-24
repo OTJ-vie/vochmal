@@ -5,6 +5,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import CTABanner from "@/components/ui/CTABanner";
 import VendorForm from "@/components/forms/VendorForm";
 import RFQForm from "@/components/forms/RFQForm";
+import ClientCard from "@/components/clients/ClientCard";
+import { clients } from "@/data/clients";
 
 export const metadata: Metadata = {
   title: "General Procurement Services",
@@ -124,7 +126,7 @@ export default function ProcurementPage() {
       <section className="section-padding bg-offwhite" aria-labelledby="sectors-heading">
         <div className="container-custom">
           <SectionHeading
-            eyebrow="Our Clients"
+            eyebrow="Who We Serve"
             title="Sectors We Serve"
             subtitle="Vochmal Procurement serves clients across Nigeria's most strategically important sectors."
             id="sectors-heading"
@@ -136,6 +138,25 @@ export default function ProcurementPage() {
                 <p className="text-navy text-sm font-semibold leading-snug">{sector}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="section-padding bg-white" aria-labelledby="proc-clients-heading">
+        <div className="container-custom">
+          <SectionHeading
+            eyebrow="Our Clients"
+            title="Procurement Clients"
+            subtitle="Clients we have supported with sourcing and supply chain delivery. Select a client to view their completed and ongoing projects."
+            id="proc-clients-heading"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clients
+              .filter((c) => c.divisionSlug === "procurement")
+              .map((client) => (
+                <ClientCard key={client.id} client={client} />
+              ))}
           </div>
         </div>
       </section>
