@@ -123,7 +123,7 @@ export default async function ClientProjectPage({ params }: Props) {
           <SectionHeading
             eyebrow="Visual Record"
             title={`Images — ${project.title}`}
-            subtitle="Select any image to open the full-size gallery."
+            subtitle=""
             id="project-images-heading"
           />
           <ProjectImages
